@@ -4,9 +4,8 @@
 
 <header class="header-section" style="top: 0; position: fixed; width: 100%; z-index: 999;">
   <div class="container">
-    <a class="site-logo" href="index.html">
-      <%= image_tag("logo.png") %>
-    </a>
+    <%= link_to image_tag("logo.png", border: 0), {action: 'index', controller: 'pages'}, {class: 'site-logo'} %>
+
     <button class="site-btn btn-sm" style="float: right;">Login</button>
 
     <div class="nav-switch">
