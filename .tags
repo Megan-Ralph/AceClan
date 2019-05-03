@@ -1,0 +1,314 @@
+Users	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^class Users::RegistrationsController < Devise::RegistrationsController$/;"	class	line:1
+new	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def new$/;"	method	line:5	class:Users
+create	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def create$/;"	method	line:9	class:Users
+edit	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def edit$/;"	method	line:13	class:Users
+update	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def update$/;"	method	line:17	class:Users
+destroy	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def destroy$/;"	method	line:21	class:Users
+configure_sign_up_params	/Users/mikedhart/Documents/AceClan/app/controllers/users/registrations_controller.rb	/^  def configure_sign_up_params$/;"	method	line:27	class:Users
+ApplicationHelper	/Users/mikedhart/Documents/AceClan/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	module	line:1
+resource_name	/Users/mikedhart/Documents/AceClan/app/helpers/application_helper.rb	/^  def resource_name$/;"	method	line:2	class:ApplicationHelper
+resource_class	/Users/mikedhart/Documents/AceClan/app/helpers/application_helper.rb	/^   def resource_class$/;"	method	line:6	class:ApplicationHelper
+resource	/Users/mikedhart/Documents/AceClan/app/helpers/application_helper.rb	/^   def resource$/;"	method	line:10	class:ApplicationHelper
+devise_mapping	/Users/mikedhart/Documents/AceClan/app/helpers/application_helper.rb	/^   def devise_mapping$/;"	method	line:14	class:ApplicationHelper
+html	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^html,$/;"	function	line:1
+body	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^body {$/;"	function	line:2
+h1	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h1,$/;"	function	line:11
+h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h2,$/;"	function	line:12
+h3	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h3,$/;"	function	line:13
+h4	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h4,$/;"	function	line:14
+h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h5,$/;"	function	line:15
+h6	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h6 {$/;"	function	line:16
+h1	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h1 {$/;"	function	line:22
+h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h2 {$/;"	function	line:26
+h3	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h3 {$/;"	function	line:30
+h4	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h4 {$/;"	function	line:34
+h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h5 {$/;"	function	line:38
+h6	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^h6 {$/;"	function	line:42
+p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^p {$/;"	function	line:46
+img	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^img {$/;"	function	line:52
+input:focus	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^input:focus,$/;"	function	line:56
+select:focus	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^select:focus,$/;"	function	line:57
+button:focus	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^button:focus,$/;"	function	line:58
+textarea:focus	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^textarea:focus {$/;"	function	line:59
+a:hover	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^a:hover,$/;"	function	line:63
+a:focus	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^a:focus {$/;"	function	line:64
+ul	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^ul,$/;"	function	line:69
+ol	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^ol {$/;"	function	line:70
+.section-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.section-title {$/;"	function	line:79
+.section-title h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.section-title h2 {$/;"	function	line:84
+.set-bg	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.set-bg {$/;"	function	line:89
+.content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.content {$/;"	function	line:95
+.text-white h1	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h1,$/;"	function	line:100
+.text-white h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h2,$/;"	function	line:101
+.text-white h3	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h3,$/;"	function	line:102
+.text-white h4	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h4,$/;"	function	line:103
+.text-white h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h5,$/;"	function	line:104
+.text-white h6	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white h6,$/;"	function	line:105
+.text-white p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white p,$/;"	function	line:106
+.text-white span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white span,$/;"	function	line:107
+.text-white li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white li,$/;"	function	line:108
+.text-white a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.text-white a {$/;"	function	line:109
+.rating i	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.rating i {$/;"	function	line:113
+.rating .is-fade	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.rating .is-fade {$/;"	function	line:117
+.site-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-btn {$/;"	function	line:126
+.site-btn.btn-sm	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-btn.btn-sm {$/;"	function	line:158
+.site-btn:hover	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-btn:hover {$/;"	function	line:163
+.cata	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.cata {$/;"	function	line:167
+.cata.new	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.cata.new {$/;"	function	line:176
+.cata.strategy	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.cata.strategy {$/;"	function	line:180
+.cata.racing	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.cata.racing {$/;"	function	line:184
+.cata.adventure	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.cata.adventure {$/;"	function	line:188
+#preloder	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^#preloder {$/;"	function	line:193
+.loader	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.loader {$/;"	function	line:203
+@keyframes loader	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@keyframes loader {$/;"	function	line:216
+0%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	0% {$/;"	function	line:217
+50%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	50% {$/;"	function	line:223
+100%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	100% {$/;"	function	line:229
+@-webkit-keyframes loader	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@-webkit-keyframes loader {$/;"	function	line:237
+0%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	0% {$/;"	function	line:238
+50%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	50% {$/;"	function	line:243
+100%	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	100% {$/;"	function	line:248
+.header-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.header-section {$/;"	function	line:259
+.site-logo	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-logo {$/;"	function	line:266
+.user-panel	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.user-panel {$/;"	function	line:272
+.user-panel a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.user-panel a {$/;"	function	line:281
+.main-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.main-menu {$/;"	function	line:286
+.main-menu ul	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.main-menu ul {$/;"	function	line:291
+.main-menu ul li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.main-menu ul li {$/;"	function	line:295
+.main-menu ul li a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.main-menu ul li a {$/;"	function	line:299
+.main-menu ul li a:hover	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.main-menu ul li a:hover {$/;"	function	line:308
+.header-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.header-btn {$/;"	function	line:312
+.nav-switch	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.nav-switch {$/;"	function	line:317
+.hero-slider .hs-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-item {$/;"	function	line:325
+.hero-slider .hs-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-text {$/;"	function	line:331
+.hero-slider .hs-text h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-text h2 {$/;"	function	line:336
+.hero-slider .hs-text h2 span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-text h2 span {$/;"	function	line:346
+.hero-slider .hs-text p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-text p {$/;"	function	line:350
+.hero-slider .hs-text .site-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .hs-text .site-btn {$/;"	function	line:359
+.hero-slider .owl-item.active .hs-item h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item h2,$/;"	function	line:365
+.hero-slider .owl-item.active .hs-item p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item p,$/;"	function	line:366
+.hero-slider .owl-item.active .hs-item .site-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item .site-btn {$/;"	function	line:367
+.hero-slider .owl-item.active .hs-item h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item h2 {$/;"	function	line:372
+.hero-slider .owl-item.active .hs-item p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item p {$/;"	function	line:378
+.hero-slider .owl-item.active .hs-item .site-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-item.active .hs-item .site-btn {$/;"	function	line:384
+.hero-slider .owl-dots	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-dots {$/;"	function	line:390
+.hero-slider .owl-dots .owl-dot	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-dots .owl-dot {$/;"	function	line:398
+.hero-slider .owl-dots .owl-dot.active	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.hero-slider .owl-dots .owl-dot.active {$/;"	function	line:411
+.latest-news-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-news-section {$/;"	function	line:419
+.ln-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.ln-title {$/;"	function	line:428
+.news-ticker	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker {$/;"	function	line:444
+.news-ticker-contant .nt-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker-contant .nt-item {$/;"	function	line:451
+.news-ticker-contant .nt-item span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker-contant .nt-item span {$/;"	function	line:457
+.news-ticker-contant .nt-item span.new	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker-contant .nt-item span.new {$/;"	function	line:467
+.news-ticker-contant .nt-item span.strategy	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker-contant .nt-item span.strategy {$/;"	function	line:471
+.news-ticker-contant .nt-item span.racing	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.news-ticker-contant .nt-item span.racing {$/;"	function	line:475
+.feature-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item {$/;"	function	line:483
+.feature-item:after	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item:after {$/;"	function	line:488
+.feature-item .cata	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item .cata {$/;"	function	line:499
+.feature-item .fi-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item .fi-content {$/;"	function	line:506
+.feature-item .fi-content h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item .fi-content h5 {$/;"	function	line:515
+.feature-item .fi-content .fi-comment	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.feature-item .fi-content .fi-comment {$/;"	function	line:519
+.recent-game-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-section {$/;"	function	line:528
+.recent-game-item .rgi-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-thumb {$/;"	function	line:534
+.recent-game-item .rgi-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-content {$/;"	function	line:539
+.recent-game-item .rgi-content h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-content h5 {$/;"	function	line:547
+.recent-game-item .rgi-content .comment	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-content .comment {$/;"	function	line:552
+.recent-game-item .rgi-extra	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-extra {$/;"	function	line:557
+.recent-game-item .rgi-extra .rgi-star	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-extra .rgi-star,$/;"	function	line:564
+.recent-game-item .rgi-extra .rgi-heart	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-extra .rgi-heart {$/;"	function	line:565
+.recent-game-item .rgi-extra .rgi-star	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-extra .rgi-star {$/;"	function	line:573
+.recent-game-item .rgi-extra .rgi-heart	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-item .rgi-extra .rgi-heart {$/;"	function	line:577
+.tournaments-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournaments-section {$/;"	function	line:585
+.tournament-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-title {$/;"	function	line:590
+.tournament-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item {$/;"	function	line:600
+.tournament-item .ti-notic	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-notic {$/;"	function	line:604
+.tournament-item .ti-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-content {$/;"	function	line:614
+.tournament-item .ti-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-thumb {$/;"	function	line:619
+.tournament-item .ti-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text {$/;"	function	line:625
+.tournament-item .ti-text h4	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text h4 {$/;"	function	line:629
+.tournament-item .ti-text ul	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text ul {$/;"	function	line:634
+.tournament-item .ti-text ul li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text ul li {$/;"	function	line:639
+.tournament-item .ti-text ul li span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text ul li span {$/;"	function	line:645
+.tournament-item .ti-text p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text p {$/;"	function	line:649
+.tournament-item .ti-text p span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.tournament-item .ti-text p span {$/;"	function	line:654
+.review-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-section {$/;"	function	line:663
+.review-item .review-cover	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover {$/;"	function	line:667
+.review-item .review-cover .score	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover .score {$/;"	function	line:673
+.review-item .review-cover .score.yellow	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover .score.yellow {$/;"	function	line:688
+.review-item .review-cover .score.purple	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover .score.purple {$/;"	function	line:692
+.review-item .review-cover .score.pink	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover .score.pink {$/;"	function	line:696
+.review-item .review-cover .score.green	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-cover .score.green {$/;"	function	line:700
+.review-item .review-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-text {$/;"	function	line:704
+.review-item .review-text h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-text h5 {$/;"	function	line:708
+.review-item .review-text p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .review-text p {$/;"	function	line:712
+.review-item .rating	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .rating {$/;"	function	line:716
+.review-item .rating i	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-item .rating i {$/;"	function	line:720
+.footer-top-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-top-section {$/;"	function	line:728
+.footer-top-section .container	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-top-section .container {$/;"	function	line:734
+.footer-top-bg	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-top-bg {$/;"	function	line:738
+.footer-logo img	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-logo img {$/;"	function	line:745
+.footer-widget	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-widget {$/;"	function	line:749
+.footer-widget .fw-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-widget .fw-title {$/;"	function	line:755
+.latest-blog .lb-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item {$/;"	function	line:760
+.latest-blog .lb-item .lb-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item .lb-thumb {$/;"	function	line:765
+.latest-blog .lb-item .lb-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item .lb-content {$/;"	function	line:771
+.latest-blog .lb-item .lb-content .lb-date	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item .lb-content .lb-date {$/;"	function	line:775
+.latest-blog .lb-item .lb-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item .lb-content p {$/;"	function	line:781
+.latest-blog .lb-item .lb-content .lb-author	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.latest-blog .lb-item .lb-content .lb-author {$/;"	function	line:787
+.top-comment	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment {$/;"	function	line:793
+.top-comment .tc-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item {$/;"	function	line:797
+.top-comment .tc-item .tc-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-thumb {$/;"	function	line:802
+.top-comment .tc-item .tc-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-content {$/;"	function	line:809
+.top-comment .tc-item .tc-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-content p {$/;"	function	line:813
+.top-comment .tc-item .tc-content p a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-content p a {$/;"	function	line:819
+.top-comment .tc-item .tc-content p span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-content p span {$/;"	function	line:823
+.top-comment .tc-item .tc-content .tc-date	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.top-comment .tc-item .tc-content .tc-date {$/;"	function	line:827
+.footer-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-section {$/;"	function	line:836
+.footer-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-menu {$/;"	function	line:842
+.footer-menu li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-menu li {$/;"	function	line:847
+.footer-menu li a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.footer-menu li a {$/;"	function	line:851
+.copyright	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.copyright {$/;"	function	line:859
+.page-info-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.page-info-section {$/;"	function	line:871
+.page-info-section .pi-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.page-info-section .pi-content {$/;"	function	line:876
+.page-info-section .pi-content h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.page-info-section .pi-content h2 {$/;"	function	line:884
+.site-pagination	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination {$/;"	function	line:890
+.site-pagination a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination a,$/;"	function	line:894
+.site-pagination span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination span {$/;"	function	line:895
+.site-pagination .active	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination .active {$/;"	function	line:908
+.site-pagination.sp-style-2 a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination.sp-style-2 a,$/;"	function	line:912
+.site-pagination.sp-style-2 span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination.sp-style-2 span {$/;"	function	line:913
+.site-pagination.sp-style-2 .active	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.site-pagination.sp-style-2 .active {$/;"	function	line:917
+.widget-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item {$/;"	function	line:921
+.widget-item:last-child	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item:last-child {$/;"	function	line:925
+.widget-item .widget-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .widget-title {$/;"	function	line:929
+.widget-item .latest-blog .lb-item .lb-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .latest-blog .lb-item .lb-content p,$/;"	function	line:933
+.widget-item .top-comment .tc-item .tc-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .top-comment .tc-item .tc-content p {$/;"	function	line:934
+.widget-item .latest-blog .lb-item .lb-content .lb-author	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .latest-blog .lb-item .lb-content .lb-author {$/;"	function	line:938
+.widget-item .top-comment .tc-item .tc-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .top-comment .tc-item .tc-content {$/;"	function	line:942
+.widget-item .review-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .review-item {$/;"	function	line:946
+.widget-item .review-item .review-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.widget-item .review-item .review-text {$/;"	function	line:950
+.search-widget	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.search-widget {$/;"	function	line:954
+.search-widget input	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.search-widget input {$/;"	function	line:958
+.search-widget button	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.search-widget button {$/;"	function	line:967
+.recent-game-page .recent-game-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.recent-game-page .recent-game-item {$/;"	function	line:983
+.single-blog-page .blog-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb {$/;"	function	line:991
+.single-blog-page .blog-thumb .rgi-extra	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb .rgi-extra {$/;"	function	line:999
+.single-blog-page .blog-thumb .rgi-extra .rgi-star	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb .rgi-extra .rgi-star,$/;"	function	line:1006
+.single-blog-page .blog-thumb .rgi-extra .rgi-heart	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb .rgi-extra .rgi-heart {$/;"	function	line:1007
+.single-blog-page .blog-thumb .rgi-extra .rgi-star	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb .rgi-extra .rgi-star {$/;"	function	line:1015
+.single-blog-page .blog-thumb .rgi-extra .rgi-heart	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-thumb .rgi-extra .rgi-heart {$/;"	function	line:1019
+.single-blog-page .blog-content h3	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-content h3 {$/;"	function	line:1023
+.single-blog-page .blog-content .meta-comment	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-content .meta-comment {$/;"	function	line:1027
+.single-blog-page .blog-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.single-blog-page .blog-content p {$/;"	function	line:1034
+.comment-warp	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-warp {$/;"	function	line:1038
+.form-label	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.form-label {$/;"	function	line:1042
+.comment-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-title {$/;"	function	line:1048
+.comment-list	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list {$/;"	function	line:1054
+.comment-list li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list li {$/;"	function	line:1058
+.comment-list .comment .comment-avator	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-avator {$/;"	function	line:1063
+.comment-list .comment .comment-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-content {$/;"	function	line:1070
+.comment-list .comment .comment-content h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-content h5 {$/;"	function	line:1074
+.comment-list .comment .comment-content h5 span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-content h5 span {$/;"	function	line:1081
+.comment-list .comment .comment-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-content p {$/;"	function	line:1086
+.comment-list .comment .comment-content .reply	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-list .comment .comment-content .reply {$/;"	function	line:1091
+.comment-form-warp	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-form-warp {$/;"	function	line:1096
+.comment-form textarea	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-form textarea {$/;"	function	line:1100
+.comment-form textarea	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.comment-form textarea {$/;"	function	line:1113
+.review-page .review-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-page .review-item {$/;"	function	line:1124
+.review-page .review-item .review-text h4	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-page .review-item .review-text h4 {$/;"	function	line:1128
+.review-dark .review-item .review-text p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-dark .review-item .review-text p {$/;"	function	line:1132
+.review-section.review-dark	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.review-section.review-dark {$/;"	function	line:1136
+.community-page .site-pagination	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-page .site-pagination {$/;"	function	line:1144
+.community-warp	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-warp {$/;"	function	line:1148
+.community-post-list	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list {$/;"	function	line:1154
+.community-post-list li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list li {$/;"	function	line:1158
+.community-post-list .community-post .author-avator	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .author-avator {$/;"	function	line:1166
+.community-post-list .community-post .post-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .post-content {$/;"	function	line:1173
+.community-post-list .community-post .post-content h5	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .post-content h5 {$/;"	function	line:1177
+.community-post-list .community-post .post-content h5 span	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .post-content h5 span {$/;"	function	line:1184
+.community-post-list .community-post .post-content p	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .post-content p {$/;"	function	line:1189
+.community-post-list .community-post .post-content .post-date	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .community-post .post-content .post-date {$/;"	function	line:1194
+.community-post-list .attachment-file	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-post-list .attachment-file {$/;"	function	line:1200
+.community-top-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-top-title {$/;"	function	line:1205
+.community-filter	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-filter {$/;"	function	line:1209
+.community-filter label	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-filter label {$/;"	function	line:1213
+.community-filter select	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.community-filter select {$/;"	function	line:1220
+.map	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.map {$/;"	function	line:1233
+.contact-info-list	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.contact-info-list {$/;"	function	line:1239
+.contact-info-list li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.contact-info-list li {$/;"	function	line:1245
+.contact-info-list .cf-left	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.contact-info-list .cf-left {$/;"	function	line:1249
+.contact-info-list .cf-right	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.contact-info-list .cf-right {$/;"	function	line:1257
+.social-links a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^.social-links a {$/;"	function	line:1263
+@media (min-width: 1200px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media (min-width: 1200px) {$/;"	function	line:1274
+.container	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.container {$/;"	function	line:1275
+@media only screen and (min-width: 992px) and (max-width: 1199px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media only screen and (min-width: 992px) and (max-width: 1199px) {$/;"	function	line:1282
+.main-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu {$/;"	function	line:1283
+.hero-slider .owl-dots	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .owl-dots {$/;"	function	line:1286
+.review-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-section {$/;"	function	line:1289
+.review-item .review-cover	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-item .review-cover {$/;"	function	line:1292
+.latest-blog .lb-item .lb-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-thumb {$/;"	function	line:1295
+.latest-blog .lb-item .lb-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-content {$/;"	function	line:1299
+.top-comment .tc-item .tc-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.top-comment .tc-item .tc-content {$/;"	function	line:1302
+.footer-top-bg	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-top-bg {$/;"	function	line:1305
+.page-info-section .pi-content h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.page-info-section .pi-content h2 {$/;"	function	line:1308
+@media only screen and (min-width: 768px) and (max-width: 991px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media only screen and (min-width: 768px) and (max-width: 991px) {$/;"	function	line:1315
+.site-logo	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.site-logo {$/;"	function	line:1316
+.main-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu {$/;"	function	line:1319
+.main-menu ul li a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu ul li a {$/;"	function	line:1322
+.user-panel	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.user-panel {$/;"	function	line:1325
+.hero-slider .hs-text h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .hs-text h2 {$/;"	function	line:1328
+.hero-slider .owl-dots	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .owl-dots {$/;"	function	line:1331
+.recent-game-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.recent-game-item {$/;"	function	line:1334
+.tournament-item .ti-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.tournament-item .ti-thumb {$/;"	function	line:1337
+.tournament-item .ti-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.tournament-item .ti-text {$/;"	function	line:1342
+.review-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-section {$/;"	function	line:1346
+.review-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-item {$/;"	function	line:1349
+.footer-logo	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-logo {$/;"	function	line:1352
+.latest-blog .lb-item .lb-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-thumb {$/;"	function	line:1355
+.latest-blog .lb-item .lb-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-content {$/;"	function	line:1359
+.footer-top-bg	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-top-bg {$/;"	function	line:1362
+@media only screen and (max-width: 767px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media only screen and (max-width: 767px) {$/;"	function	line:1369
+.header-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.header-section {$/;"	function	line:1370
+.header-section .container	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.header-section .container {$/;"	function	line:1374
+.site-logo	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.site-logo {$/;"	function	line:1377
+.main-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu {$/;"	function	line:1381
+.main-menu ul li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu ul li {$/;"	function	line:1390
+.main-menu ul li a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.main-menu ul li a {$/;"	function	line:1394
+.nav-switch	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.nav-switch {$/;"	function	line:1399
+.user-panel	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.user-panel {$/;"	function	line:1406
+.hero-slider .hs-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .hs-item {$/;"	function	line:1409
+.hero-slider .hs-text h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .hs-text h2 {$/;"	function	line:1412
+.hero-slider .owl-dots	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .owl-dots {$/;"	function	line:1415
+.ln-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.ln-title {$/;"	function	line:1418
+.feature-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.feature-item {$/;"	function	line:1421
+.recent-game-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.recent-game-item {$/;"	function	line:1424
+.review-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-section {$/;"	function	line:1427
+.review-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.review-item {$/;"	function	line:1430
+.footer-logo	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-logo {$/;"	function	line:1433
+.footer-top-bg	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-top-bg {$/;"	function	line:1436
+.footer-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-section {$/;"	function	line:1439
+.footer-menu li:first-child a	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-menu li:first-child a {$/;"	function	line:1443
+.footer-menu	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-menu,$/;"	function	line:1446
+.copyright	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.copyright {$/;"	function	line:1447
+.copyright	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.copyright {$/;"	function	line:1450
+.community-post-list li	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.community-post-list li {$/;"	function	line:1453
+.page-info-section .pi-content h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.page-info-section .pi-content h2 {$/;"	function	line:1456
+@media only screen and (max-width: 576px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media only screen and (max-width: 576px) {$/;"	function	line:1463
+.hero-slider .owl-dots	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .owl-dots {$/;"	function	line:1464
+.feature-section	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.feature-section {$/;"	function	line:1467
+.community-post-list .community-post .author-avator	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.community-post-list .community-post .author-avator {$/;"	function	line:1471
+.community-post-list .community-post .post-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.community-post-list .community-post .post-content {$/;"	function	line:1474
+@media only screen and (max-width: 479px)	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^@media only screen and (max-width: 479px) {$/;"	function	line:1482
+.hero-slider .hs-item	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.hero-slider .hs-item {$/;"	function	line:1483
+.ln-title	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.ln-title {$/;"	function	line:1487
+.news-ticker	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.news-ticker {$/;"	function	line:1490
+.tournament-item .ti-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.tournament-item .ti-thumb {$/;"	function	line:1493
+.tournament-item .ti-text	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.tournament-item .ti-text {$/;"	function	line:1498
+.latest-blog .lb-item .lb-thumb	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-thumb {$/;"	function	line:1502
+.latest-blog .lb-item .lb-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.latest-blog .lb-item .lb-content {$/;"	function	line:1506
+.top-comment .tc-item .tc-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.top-comment .tc-item .tc-content {$/;"	function	line:1509
+.site-btn	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.site-btn {$/;"	function	line:1512
+.comment-list .comment .comment-avator	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.comment-list .comment .comment-avator {$/;"	function	line:1516
+.comment-list .comment .comment-content	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.comment-list .comment .comment-content {$/;"	function	line:1519
+.footer-widget	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.footer-widget {$/;"	function	line:1523
+.page-info-section .pi-content h2	/Users/mikedhart/Documents/AceClan/app/assets/stylesheets/style.css	/^	.page-info-section .pi-content h2 {$/;"	function	line:1526
