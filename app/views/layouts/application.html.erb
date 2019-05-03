@@ -21,6 +21,39 @@
   </head>
 
   <body>
+    <header class="header-section" style="top: 0; position: fixed; width: 100%; z-index: 999;">
+      <div class="container">
+        <%= link_to image_tag("logo.png", border: 0), {action: 'index', controller: 'pages'}, {class: 'site-logo'} %>
+
+        <button class="site-btn btn-sm" style="float: right;">Login</button>
+
+        <div class="nav-switch">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <nav class="main-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div style="z-index: 1000;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li><a href="/pages/games">Games</a></li>
+            <li><a href="categories.html">Blog</a></li>
+            <li><a href="community.html">Forums</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
