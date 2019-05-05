@@ -25,7 +25,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password_confirmation, :password])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password_confirmation, :password, :game_id, :dob, :location, :discord_username, :mic, :what_game_why, :console_gaming, :hear_ace, :referring_member, :admin_interest, :clan_before, :vpn_connection])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
