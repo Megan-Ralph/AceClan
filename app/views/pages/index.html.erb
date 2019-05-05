@@ -2,7 +2,7 @@
   <div class="loader"></div>
 </div>
 
-<% if user_signed_in? && @user.game_id.nil? && @user.present? %>
+<% if user_signed_in? && @user&.game_id.nil? && @user.present? %>
   <section class="content">
     <div class="container  ">
       <div class="col-md-8 offset-md-2">
@@ -21,7 +21,7 @@
       </div>
     </div>
   </section>
-<% elsif user_signed_in? && @user.game_id.present? && @user.present? %>
+<% elsif user_signed_in? && @user&.game_id.present? && @user.present? %>
 <section class="content">
   <div class="container  ">
     <div class="col-md-8 offset-md-2">
