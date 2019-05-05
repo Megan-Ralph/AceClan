@@ -2,18 +2,37 @@
   <div class="loader"></div>
 </div>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && @user.game_id.nil? %>
   <section class="content">
     <div class="container  ">
       <div class="col-md-8 offset-md-2">
-        <h4 class="comment-title">YOU'RE LOGGED IN</h4>
-          Click the button below to go to our forums. You will be able to login with the same username and password.
-
-          <br></br>
-          <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
+        <h4 class="comment-title">CLAN APPLICATION</h4>
+        The focus for joining AceClan is that you are willing to become a proactive member of the clan, and will follow our code of conduct ( https://forum.aceclan.org/topic/11-code-of-conduct/ ) -
+        this stipulates everything from your expected level of commitment to your willingness to make use of our servers & services.
+        <br></br>
+        You can only apply for a game that we actively support, to determine this you should look to see if we have a forum section dedicated to the game and - if applicable -
+        if we host servers in that game. Applying for a specific game does not mean we are disallowing you from playing other games, it just means that this is the game you expect to
+        play the most with us, and the command team of this game is responsible for you in respect of promotions and more.
+        <br></br>
+        If you want to continue browsing the forums and website as a guest, don't fill out this form. You can visit the forums <a href="https://forum.aceclan.org/">here.</a>
+        <br></br>
+        <%= render "game_application" %>
+        <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
       </div>
     </div>
   </section>
+<% elsif user_signed_in? && @user.game_id.present? %>
+<section class="content">
+  <div class="container  ">
+    <div class="col-md-8 offset-md-2">
+      <h4 class="comment-title">WELCOME, <%= @user.username.upcase %></h4>
+
+      <br></br>
+      <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
+    </div>
+  </div>
+</section>
+
 <% else %>
   <section class="content">
     <div class="container  ">
@@ -22,48 +41,7 @@
           <h4 class="comment-title">CREATE AN ACCOUNT</h4>
           Creating an account using this form, will automaticly create you a login for our forums. You will be able to login with the same username and password.
           <br /><Br />
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-12">
-                      <div class="field"
-                        <%= f.label :username %>
-                        <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="field">
-                        <%= f.label :email %>
-                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="field">
-                        <%= f.label :password %>
-                        <% if @minimum_password_length %>
-                        <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %><br />
-                        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="field">
-                        <%= f.label :password_confirmation %><br />
-                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password Confirmation" %>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div class="actions" style="padding-top: 2%">
-                        <%= f.submit "Sign up", class: "site-btn btn-sm centered" %>
-                      </div>
-                    </div>
-                </div>
-                  <%= render "devise/shared/links" %>
-            </div>
-          </div>
-        <% end %>
+          <%= render "basic_sign_up" %>
       </div>
     </div>
   </section>

@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def index
-    #index stuff
+    if user_signed_in? && current_user.present?
+      @user = current_user
+    end
   end
 
   def show

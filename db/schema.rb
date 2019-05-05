@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_114511) do
+ActiveRecord::Schema.define(version: 2019_05_05_124744) do
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 2019_05_05_114511) do
     t.datetime "updated_at", null: false
     t.boolean "admin"
     t.string "username"
+    t.integer "game_id"
+    t.datetime "dob"
+    t.string "location"
+    t.string "discord_username"
+    t.boolean "mic"
+    t.text "what_game_why"
+    t.text "console_gaming"
+    t.text "hear_ace"
+    t.string "referring_member"
+    t.boolean "admin_interest"
+    t.boolean "clan_before"
+    t.boolean "vpn_connection"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

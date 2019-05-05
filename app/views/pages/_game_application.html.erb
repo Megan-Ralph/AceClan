@@ -1,0 +1,106 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="form-group">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="field"
+              <%= f.label :username %>
+              <%= f.text_field :username, class: "form-control", value: @user.username %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: @user.email %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :game_id, "Which game are you applying for?" %>
+              <%= f.select :game_id, Game.all.map{ |g| [g.name, g.id] }, {}, {class: "form-control"} %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :dob, "Date of Birth" %>
+              <%= f.date_field :dob, class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :location %>
+              <%= f.text_field :location, class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :discord_username %>
+              <%= f.text_field :discord_username, class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :mic, "Do you have and use a microphone?" %>
+              <%= f.select :mic, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :what_game_why, "What game do you want to join us for, and why?" %>
+              <%= f.text_area :what_game_why, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :console_gaming, "If applicable, are you joining us for Console gameplay? and if yes, which console?" %>
+              <%= f.text_area :console_gaming, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :referring_member, "Were you referred by a current member, if yes, who?" %>
+              <%= f.text_field :referring_member, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :hear_ace, "Where did you hear about AceClan?" %>
+              <%= f.text_area :hear_ace, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="field">
+              <%= f.label :admin_interest, "Would you have an interest in joining our Administrative Departments (e.g. Military Police or Admissions Team)?" %>
+              <%= f.select :admin_interest, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :clan_before, "Have you ever been in a clan like this before?" %>
+              <%= f.select :clan_before, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="field">
+              <%= f.label :vpn_connection %>
+              <%= f.select :vpn_connection, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+            </div>
+          </div>
+
+
+          <div class="col-lg-12">
+            <div class="actions" style="padding-top: 2%">
+              <%= f.submit "Apply", class: "site-btn btn-sm centered" %>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+<% end %>
