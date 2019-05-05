@@ -667,6 +667,7 @@ ol {
 .review-item .review-cover {
 	position: relative;
 	margin-bottom: 30px;
+	margin-top: 50px;
 	height: 345px;
 }
 
@@ -871,6 +872,8 @@ ol {
 .page-info-section {
 	height: 499px;
 	position: relative;
+	background-image: url("/assets/game-banner.png");
+	background-position: center;
 }
 
 .page-info-section .pi-content {
