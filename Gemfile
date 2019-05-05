@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'image_processing', '~> 1.2'
 gem 'rails_admin'
 gem 'devise'
 gem 'rails', '~> 5.2.3'
