@@ -4,34 +4,18 @@ class ForumEnrollment
 
   def initialize(user_id)
     @user = User.find(user_id)
-    @auth_body = { "key" => "c88540e61d46bb7837a677289c8872c1" }
-    @options = {
-      headers: { "Content-Type" => "application/json" }
-    }
+    @api_key = "c88540e61d46bb7837a677289c8872c1"
   end
 
   def enroll
-    @body = @auth_body
-    @body = {}
-    @body["name"] = "#{@user.username}"
-    @body["email"] = "#{@user.email}"
-    @body["password"] = "#{@user.password}"
-    @body["group"] = "67"
-    @body["secondaryGroups"] = "68"
-    @body["validated"] = "0"
-
-    @options[:body] = @body.to_json
-
-    if @user.confirmed_at.present?
-      validated = 1
-    else
-      validated = 0
-    end
-
-    response = self.class.post("/core/members?key=c88540e61d46bb7837a677289c8872c1&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=67&secondaryGroups=68&validated=#{validated}")
-    #api acceptance format
-    #http://www.example.com/api/core/hello?key={apiKeyHere}
+    #I'm always sending validated as true because users get enrolled when they validate their account
+    response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=67&secondaryGroups=68&validated=1")
     @user.update(enrolled: true)
+  end
 
+  def apply
+    response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=67&secondaryGroups=68&validated=1")
+
+    @user.update(applied: true)
   end
 end
