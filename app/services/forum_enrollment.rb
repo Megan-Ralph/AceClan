@@ -21,9 +21,17 @@ class ForumEnrollment
     @body["validated"] = "0"
 
     @options[:body] = @body.to_json
-    response = self.class.post("/core/members?key=c88540e61d46bb7837a677289c8872c1&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=67&secondaryGroups=68&validated=0")
+
+    if @user.confirmed_at.present?
+      validated = 1
+    else
+      validated = 0
+    end
+
+    response = self.class.post("/core/members?key=c88540e61d46bb7837a677289c8872c1&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=67&secondaryGroups=68&validated=#{validated}")
     #api acceptance format
     #http://www.example.com/api/core/hello?key={apiKeyHere}
+    @user.update(enrolled: true)
 
   end
 end
