@@ -4,4 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  after_create :forum_enrollment
+
+  def forum_enrollment
+    user_enroll = ForumEnrollment.new(id)
+    user_enroll.enroll
+  end
+
 end
