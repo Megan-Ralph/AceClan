@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   after_update :forum_enrollment
-  after_update :forum_application
+  #after_update :forum_application
 
   def forum_enrollment
     if enrolled == false && confirmed_at == true
