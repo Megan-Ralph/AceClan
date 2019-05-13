@@ -13,22 +13,20 @@
         If you want to continue browsing the forums and website as a guest, don't fill out this form. You can visit the forums <a href="https://forum.aceclan.org/">here.</a>
         <br></br>
         <%= render "game_application" %>
-        <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
       </div>
     </div>
   </section>
 <% elsif user_signed_in? && @user&.game_id.present? && @user.present? %>
-<section class="content">
-  <div class="container  ">
-    <div class="col-md-8 offset-md-2">
-      <h4 class="comment-title">WELCOME, <%= @user.username.upcase %></h4>
+  <section class="content">
+    <div class="container  ">
+      <div class="col-md-8 offset-md-2">
+        <h4 class="comment-title">WELCOME, <%= @user.username.upcase %></h4>
 
-      <br></br>
-      <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
+        <br></br>
+        <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 <% else %>
   <section class="content">
     <div class="container  ">
