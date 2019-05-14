@@ -18,9 +18,12 @@
   </section>
 <% elsif user_signed_in? && @user&.game_id.present? && @user.present? %>
   <section class="content">
-    <div class="container  ">
+    <div class="container">
       <div class="col-md-8 offset-md-2">
         <h4 class="comment-title">WELCOME, <%= @user.username.upcase %></h4>
+
+        <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
+        <p>You are a <%= @user.forum_primary_group_name %></p>
 
         <br></br>
         <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
