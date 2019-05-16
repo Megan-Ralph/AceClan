@@ -31,6 +31,7 @@ class ForumEnrollment
         @user.update(forum_game_id: s_group.dig("id"))
       end
     end
+    @user.update(forum_secondary_groups: secondary_groups.pluck("id"))
   end
 
 end
