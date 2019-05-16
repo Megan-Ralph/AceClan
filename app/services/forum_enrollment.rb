@@ -23,7 +23,7 @@ class ForumEnrollment
     data = JSON.parse(response.body)
     data = data.dig("results")
 
-    @user.update(forum_primary_group_id: data.first.dig("primaryGroup").dig("id"), forun_primary_group_name: data.first.dig("primaryGroup").dig("formattedName"))
+    @user.update(forum_primary_group_id: data.first.dig("primaryGroup").dig("id"), forum_primary_group_name: data.first.dig("primaryGroup").dig("formattedName"))
 
     secondary_groups = data.first.dig("secondaryGroups")
     secondary_groups.each do |s_group|

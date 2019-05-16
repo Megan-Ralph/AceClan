@@ -58,8 +58,5 @@ class User < ApplicationRecord
     end
   end
 
-  def find_game_group_id
-    #
-  end
 
 end

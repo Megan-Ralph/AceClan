@@ -1,4 +1,4 @@
-<% if user_signed_in? && @user&.game_id.nil? && @user.present? %>
+<% if user_signed_in? && (@user.game_id.nil?) %>
   <section class="content">
     <div class="container  ">
       <div class="col-md-8 offset-md-2">
@@ -21,10 +21,12 @@
     <div class="container">
       <div class="col-md-8 offset-md-2">
         <h4 class="comment-title">WELCOME, <%= @user.username.upcase %></h4>
-
-        <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
-        <p>You are a <%= @user.forum_primary_group_name %></p>
-
+        <% if @user.forum_game_id && @user.forum_primary_group_id %>
+          <p>You are a <%= Rails::Html::FullSanitizer.new.sanitize(@user.forum_primary_group_name) %></p>
+          <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
+        <% else %>
+          <p>Thank you for signing up Ace Clan! Please wait for a member of our admissions team to approve your application. Until then, please feel free to log into our forums and look around. You can use the same login as this website to log in.</p>
+        <% end %>
         <br></br>
         <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
       </div>
