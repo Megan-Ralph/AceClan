@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="col-md-8 offset-md-2">
+    <h4>Pending Approvals</h4>
+    <% Approval.all.each do |app| %>
+      <%= app.user_id %>
+      approve button
+      deny button
+      link to user details
+    <% end %>
+  </div>
+</div>
