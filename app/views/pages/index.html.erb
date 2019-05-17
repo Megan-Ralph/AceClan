@@ -27,7 +27,7 @@
         <% else %>
           <p>Thank you for signing up Ace Clan! Please wait for a member of our admissions team to approve your application. Until then, please feel free to log into our forums and look around. You can use the same login as this website to log in.</p>
         <% end %>
-        <% if @user.forum_secondary_groups.include?("15") %>
+        <% if @user.forum_secondary_groups.include?("4") || @user.forum_secondary_groups.include?("37") %>
           <%= render "approvals" %>
         <% end %>
         <br></br>

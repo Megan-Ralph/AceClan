@@ -1,11 +1,21 @@
-<div class="container">
-  <div class="col-md-8 offset-md-2">
-    <h4>Pending Approvals</h4>
+<h4>Pending Approvals</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Game applied for</th>
+      <th scope="col">Age</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
     <% Approval.all.each do |app| %>
-      <%= app.user_id %>
-      approve button
-      deny button
-      link to user details
+      <tr>
+        <td><%= app.user.username %></td>
+        <td><%= app.game.name %></td>
+        <td><%= app.user.dob %></td>
+        <td><%= link_to "Application", approval_path(app) %></td>
+      </tr>
     <% end %>
-  </div>
-</div>
+  </tbody>
+</table>

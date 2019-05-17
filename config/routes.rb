@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root to: 'pages#index'
   devise_for :users
+
+  resources :approvals
+
   resource :user, only: [:edit, :index] do
-  collection do
-    patch 'update_user'
+    collection do
+      patch 'update_user'
+    end
   end
-end
 
   get "/pages/:page" => "pages#show"
 end
