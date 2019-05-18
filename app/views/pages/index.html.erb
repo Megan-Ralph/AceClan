@@ -1,4 +1,4 @@
-<% if user_signed_in? && (@user.game_id.nil?) %>
+<% if user_signed_in? && @user.enrolled == true && @user.applied == false %>
   <section class="content">
     <div class="container  ">
       <div class="col-md-8 offset-md-2">
@@ -16,7 +16,7 @@
       </div>
     </div>
   </section>
-<% elsif user_signed_in? && @user&.game_id.present? && @user.present? %>
+<% elsif @user.present? && user_signed_in? && @user.enrolled == true && @user.applied == true %>
   <section class="content">
     <div class="container">
       <div class="col-md-8 offset-md-2">
