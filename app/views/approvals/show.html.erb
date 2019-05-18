@@ -1,0 +1,21 @@
+<section class="content">
+  <div class="container">
+    <div class="col-md-8 offset-md-2">
+      <h4>Viewing Application for <%= @user.username %></h4>
+      <br></br>
+
+      <p><b>Applying for game:</b> <%= @user.game_id %></p>
+      <p><b>Date of Birth:</b> <%= @user.dob %></p>
+      <p><b>Location:</b> <%= @user.location %></p>
+      <p><b>Discord Username:</b> <%= @user.discord_username %></p>
+      <p><b>Do you have and use a microphone?</b> <%= @user.mic %></p>
+      <p><b>What game do you want to join us for, and why?</b> <%= @user.what_game_why %></p>
+      <p><b>If applicable, are you joining us for Console gameplay? and if yes, which console?</b> <%= @user.console_gaming %></p>
+      <p><b>Were you referred by a current member, if yes, who?</b> <%= @user.referring_member %></p>
+      <p><b>Where did you hear about AceClan?</b> <%= @user.hear_ace %></p>
+      <p><b>Would you have an interest in joining our Administrative Departments (e.g. Military Police or Admissions Team)?</b> <%= @user.admin_interest %></p>
+      <p><b>Have you ever been in a clan like this before?</b> <%= @user.clan_before %></p>
+      <p><b>Do you use a VPN to connect to the internet or play games?</b> <%= @user.vpn_connection %></p>
+    </div>
+  </div>
+</section>

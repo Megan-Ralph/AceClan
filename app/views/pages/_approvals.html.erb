@@ -1,21 +1,28 @@
-<h4>Pending Approvals</h4>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Username</th>
-      <th scope="col">Game applied for</th>
-      <th scope="col">Age</th>
-      <th scope="col">View</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% Approval.all.each do |app| %>
+<h4>Pending Applications</h4>
+<p>Because you are a member of Central Command or Admissions, you can view, accept and decline applications.
+  When you accept an application, the user is automaticly created on the forums with the correct groups.</p>
+
+<% if Approval.where(approved_at: nil).any? %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= app.user.username %></td>
-        <td><%= app.game.name %></td>
-        <td><%= app.user.dob %></td>
-        <td><%= link_to "Application", approval_path(app) %></td>
+        <th scope="col">Username</th>
+        <th scope="col">Game applied for</th>
+        <th scope="col">Age</th>
+        <th scope="col">View</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% Approval.all.each do |app| %>
+        <tr>
+          <td><%= app.user.username %></td>
+          <td><%= app.game.name %></td>
+          <td><%= app.user.dob %></td>
+          <td><%= link_to "View Application", approval_path(app), class: "btn btn-success" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h5><i>There are currently no applications!</i></h5>
+<% end %>

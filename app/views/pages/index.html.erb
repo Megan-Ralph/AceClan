@@ -1,4 +1,4 @@
-<% if user_signed_in? && @user.enrolled == true && @user.applied == false %>
+<% if user_signed_in? && !@user.forum_primary_group_id %>
   <section class="content">
     <div class="container  ">
       <div class="col-md-8 offset-md-2">
@@ -16,7 +16,7 @@
       </div>
     </div>
   </section>
-<% elsif @user.present? && user_signed_in? && @user.enrolled == true && @user.applied == true %>
+<% elsif @user.present? && user_signed_in? && @user.forum_primary_group_id.present? %>
   <section class="content">
     <div class="container">
       <div class="col-md-8 offset-md-2">
@@ -25,6 +25,7 @@
           <p>You are a <%= Rails::Html::FullSanitizer.new.sanitize(@user.forum_primary_group_name) %></p>
           <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
         <% else %>
+          <br></br>
           <p>Thank you for signing up Ace Clan! Please wait for a member of our admissions team to approve your application. Until then, please feel free to log into our forums and look around. You can use the same login as this website to log in.</p>
         <% end %>
         <% if @user&.forum_secondary_groups&.include?("4") || @user&.forum_secondary_groups&.include?("37") %>
