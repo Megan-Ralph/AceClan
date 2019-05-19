@@ -1,51 +1,9 @@
-<% if user_signed_in? && !@user.forum_primary_group_id %>
-  <section class="content">
-    <div class="container  ">
-      <div class="col-md-8 offset-md-2">
-        <h4 class="comment-title">CLAN APPLICATION</h4>
-        The focus for joining AceClan is that you are willing to become a proactive member of the clan, and will follow our code of conduct ( https://forum.aceclan.org/topic/11-code-of-conduct/ ) -
-        this stipulates everything from your expected level of commitment to your willingness to make use of our servers & services.
-        <br></br>
-        You can only apply for a game that we actively support, to determine this you should look to see if we have a forum section dedicated to the game and - if applicable -
-        if we host servers in that game. Applying for a specific game does not mean we are disallowing you from playing other games, it just means that this is the game you expect to
-        play the most with us, and the command team of this game is responsible for you in respect of promotions and more.
-        <br></br>
-        If you want to continue browsing the forums and website as a guest, don't fill out this form. You can visit the forums <a href="https://forum.aceclan.org/">here.</a>
-        <br></br>
-        <%= render "game_application" %>
-      </div>
-    </div>
-  </section>
-<% elsif @user.present? && user_signed_in? && @user.forum_primary_group_id.present? %>
-  <section class="content">
-    <div class="container">
-      <div class="col-md-8 offset-md-2">
-        <h4 class="comment-title">WELCOME, <%= @user&.username&.upcase %></h4>
-        <% if @user.forum_game_id && @user.forum_primary_group_id %>
-          <p>You are a <%= Rails::Html::FullSanitizer.new.sanitize(@user.forum_primary_group_name) %></p>
-          <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
-        <% else %>
-          <br></br>
-          <p>Thank you for signing up Ace Clan! Please wait for a member of our admissions team to approve your application. Until then, please feel free to log into our forums and look around. You can use the same login as this website to log in.</p>
-        <% end %>
-        <% if @user&.forum_secondary_groups&.include?("4") || @user&.forum_secondary_groups&.include?("37") %>
-          <%= link_to "Clan Applications", approvals_path, class: "btn btn-info" %>
-        <% end %>
-        <br></br>
-        <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
-      </div>
-    </div>
-  </section>
+<% if user_signed_in? && !Approval.where(user_id: current_user.id).any? %>
+  <%= render "game_application" %>
+<% elsif user_signed_in? && Approval.where(user_id: current_user.id).any? %>
+    <%= render "non_member_logged_in"%>
+<% elsif user_signed_in? && @user.forum_primary_group_id.present? %>
+  <%= render "member_logged_in" %>
 <% else %>
-  <section class="content">
-    <div class="container  ">
-      <div class="col-md-8 offset-md-2">
-        <div class="contact-form-warp">
-          <h4 class="comment-title">CREATE AN ACCOUNT</h4>
-          Creating an account using this form, will automaticly create you a login for our forums. You will be able to login with the same username and password.
-          <br /><Br />
-          <%= render "basic_sign_up" %>
-      </div>
-    </div>
-  </section>
+  <%= render "basic_sign_up" %>
 <% end %>

@@ -1,106 +1,122 @@
-<%= form_for @user, :url => url_for(:controller => 'users', :action => 'update_user') do |f| %>
+<section class="content">
+  <div class="container  ">
+    <div class="col-md-8 offset-md-2">
+      <h4 class="comment-title">CLAN APPLICATION</h4>
+      The focus for joining AceClan is that you are willing to become a proactive member of the clan, and will follow our code of conduct ( https://forum.aceclan.org/topic/11-code-of-conduct/ ) -
+      this stipulates everything from your expected level of commitment to your willingness to make use of our servers & services.
+      <br></br>
+      You can only apply for a game that we actively support, to determine this you should look to see if we have a forum section dedicated to the game and - if applicable -
+      if we host servers in that game. Applying for a specific game does not mean we are disallowing you from playing other games, it just means that this is the game you expect to
+      play the most with us, and the command team of this game is responsible for you in respect of promotions and more.
+      <br></br>
+      If you want to continue browsing the forums and website as a guest, don't fill out this form. You can visit the forums <a href="https://forum.aceclan.org/">here.</a>
+      <br></br>
 
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <div class="form-group">
-      <div class="row">
-          <div class="col-md-12">
-            <div class="field"
-              <%= f.label :username %>
-              <%= f.text_field :username, class: "form-control", value: @user.username %>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: @user.email %>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :game_id, "Which game are you applying for?" %>
-              <%= f.select :game_id, Game.all.map{ |g| [g.name, g.id] }, {}, {class: "form-control"} %>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :dob, "Date of Birth" %>
-              <%= f.date_field :dob, class: "form-control" %>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :location %>
-              <%= f.text_field :location, class: "form-control" %>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :discord_username %>
-              <%= f.text_field :discord_username, class: "form-control" %>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :mic, "Do you have and use a microphone?" %>
-              <%= f.select :mic, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
-            </div>
-          </div>
+      <%= form_for @user, :url => url_for(:controller => 'users', :action => 'update_user') do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="field"
+                    <%= f.label :username %>
+                    <%= f.text_field :username, class: "form-control", value: @user.username %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: @user.email %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :game_id, "Which game are you applying for?" %>
+                    <%= f.select :game_id, Game.all.map{ |g| [g.name, g.id] }, {}, {class: "form-control"} %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :dob, "Date of Birth" %>
+                    <%= f.date_field :dob, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :location %>
+                    <%= f.text_field :location, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :discord_username %>
+                    <%= f.text_field :discord_username, class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :mic, "Do you have and use a microphone?" %>
+                    <%= f.select :mic, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+                  </div>
+                </div>
 
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :what_game_why, "What game do you want to join us for, and why?" %>
-              <%= f.text_area :what_game_why, class: "form-control" %>
-            </div>
-          </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :what_game_why, "What game do you want to join us for, and why?" %>
+                    <%= f.text_area :what_game_why, class: "form-control" %>
+                  </div>
+                </div>
 
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :console_gaming, "If applicable, are you joining us for Console gameplay? and if yes, which console?" %>
-              <%= f.text_area :console_gaming, class: "form-control" %>
-            </div>
-          </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :console_gaming, "If applicable, are you joining us for Console gameplay? and if yes, which console?" %>
+                    <%= f.text_area :console_gaming, class: "form-control" %>
+                  </div>
+                </div>
 
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :referring_member, "Were you referred by a current member, if yes, who?" %>
-              <%= f.text_field :referring_member, class: "form-control" %>
-            </div>
-          </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :referring_member, "Were you referred by a current member, if yes, who?" %>
+                    <%= f.text_field :referring_member, class: "form-control" %>
+                  </div>
+                </div>
 
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :hear_ace, "Where did you hear about AceClan?" %>
-              <%= f.text_area :hear_ace, class: "form-control" %>
-            </div>
-          </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :hear_ace, "Where did you hear about AceClan?" %>
+                    <%= f.text_area :hear_ace, class: "form-control" %>
+                  </div>
+                </div>
 
-          <div class="col-md-12">
-            <div class="field">
-              <%= f.label :admin_interest, "Would you have an interest in joining our Administrative Departments (e.g. Military Police or Admissions Team)?" %>
-              <%= f.select :admin_interest, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
-            </div>
-          </div>
+                <div class="col-md-12">
+                  <div class="field">
+                    <%= f.label :admin_interest, "Would you have an interest in joining our Administrative Departments (e.g. Military Police or Admissions Team)?" %>
+                    <%= f.select :admin_interest, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+                  </div>
+                </div>
 
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :clan_before, "Have you ever been in a clan like this before?" %>
-              <%= f.select :clan_before, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
-            </div>
-          </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :clan_before, "Have you ever been in a clan like this before?" %>
+                    <%= f.select :clan_before, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+                  </div>
+                </div>
 
-          <div class="col-md-6">
-            <div class="field">
-              <%= f.label :vpn_connection, "Do you use a VPN to connect to the internet?" %>
-              <%= f.select :vpn_connection, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
-            </div>
-          </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <%= f.label :vpn_connection, "Do you use a VPN to connect to the internet?" %>
+                    <%= f.select :vpn_connection, options_for_select([["Yes", true], ["No", false]]), {}, {class: "form-control"} %>
+                  </div>
+                </div>
 
-          <div class="col-lg-12">
-            <div class="actions" style="padding-top: 2%">
-              <%= f.submit "Apply", class: "site-btn btn-sm centered" %>
+                <div class="col-lg-12">
+                  <div class="actions" style="padding-top: 2%">
+                    <%= f.submit "Apply", class: "site-btn btn-sm centered" %>
+                  </div>
+                </div>
             </div>
-          </div>
+        </div>
       </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<% end %>
+</section>

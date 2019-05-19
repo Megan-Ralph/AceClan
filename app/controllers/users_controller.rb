@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       bypass_sign_in(@user)
       redirect_to root_path
       Approval.create(user_id: @user.id, game_id: params[:user][:game_id])
-      flash[:notice] = "Thanks for applying! Please wait for approval from a member of the admissions team!"
+      flash[:alert] = "Thanks for applying! Please wait for approval from a member of the admissions team!"
     else
       render "edit"
     end
