@@ -1,4 +1,4 @@
-<% if user_signed_in? && !Approval.where(user_id: current_user.id).any? %>
+<% if user_signed_in? && !Approval.where(user_id: current_user.id).any? && !@user.forum_primary_group_id.present? %>
   <%= render "game_application" %>
 <% elsif user_signed_in? && Approval.where(user_id: current_user.id).any? %>
     <%= render "non_member_logged_in"%>
