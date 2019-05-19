@@ -1,11 +1,43 @@
 <section class="content">
   <div class="container">
     <div class="col-md-8 offset-md-2">
-      <% if Approval.all.any? %>
-        <h4>Viewing All Applications</h4>
-        <br></br>
-        <table class="table">
-          <thead>
+      <h4>Pending Applications</h4>
+      <p>Because you are a member of Central Command or Admissions, you can view, accept and decline applications.
+        When you accept an application, the user is automatically created on the forums with the correct groups.</p>
+
+      <% if Approval.where(approved_at: nil).any? %>
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Game applied for</th>
+              <th scope="col">Age</th>
+              <th scope="col">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% Approval.where(approved_at: nil, denied: false).each do |app| %>
+              <tr>
+                <td><%= app.user.username %></td>
+                <td><%= app.game.name %></td>
+                <td><%= app.user.dob %></td>
+                <td><%= link_to "View Application", approval_path(app), class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h5><i>There are currently no applications!</i></h5>
+      <% end %>
+
+      <div class="clear"></div>
+      <br></br>
+      <br></br>
+
+      <h4>Viewing All Applications</h4>
+      <p>This table includes all applications in the system, both accepted and denied.</p>
+        <table class="table table-hover">
+          <thead class="thead-dark">
             <tr>
               <th scope="col">Username</th>
               <th scope="col">Game applied for</th>
@@ -40,9 +72,6 @@
             <% end %>
           </tbody>
         </table>
-      <% else %>
-        <h5><i>There are currently no applications in the system!</i></h5>
-      <% end %>
     </div>
   </div>
 </section>
