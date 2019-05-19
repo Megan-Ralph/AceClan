@@ -32,6 +32,7 @@
 #  forum_game_id            :integer
 #  forum_primary_group_id   :integer
 #  forum_primary_group_name :string(255)
+#  forum_secondary_groups   :string(255)
 #
 
 class User < ApplicationRecord

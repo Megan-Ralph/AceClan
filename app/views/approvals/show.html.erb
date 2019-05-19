@@ -2,6 +2,8 @@
   <div class="container">
     <div class="col-md-8 offset-md-2">
       <h4>Viewing Application for <%= @user.username %></h4>
+      <p>Because you are a member of Central Command or Admissions you can view, accept and decline applications.
+        When you accept an application, the user is automatically created on the forums with the correct groups.</p>
       <br></br>
 
       <p><b>Applying for game:</b> <%= @user.game_id %></p>
@@ -16,6 +18,14 @@
       <p><b>Would you have an interest in joining our Administrative Departments (e.g. Military Police or Admissions Team)?</b> <%= @user.admin_interest %></p>
       <p><b>Have you ever been in a clan like this before?</b> <%= @user.clan_before %></p>
       <p><b>Do you use a VPN to connect to the internet or play games?</b> <%= @user.vpn_connection %></p>
+      <br></br>
+
+      <% prms = { approvals: { approved_by: current_user.id, approved_at: Time.now } } %>
+      <%= link_to "Approve Application", approval_path(prms), method: 'patch', class: "btn btn-success", style: "float: left;" %>
+
+      <% rprms = { approvals: { denied: true } } %>
+      <%= link_to "Deny Application", approval_path(rprms), method: 'patch', class: "btn btn-danger", style: "float: right;" %>
+
     </div>
   </div>
 </section>

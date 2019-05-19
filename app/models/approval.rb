@@ -8,6 +8,7 @@
 #  created_at  :datetime
 #  approved_by :integer
 #  approved_at :datetime
+#  denied      :boolean          default(FALSE)
 #
 
 class Approval < ApplicationRecord

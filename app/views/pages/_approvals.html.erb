@@ -1,6 +1,6 @@
 <h4>Pending Applications</h4>
 <p>Because you are a member of Central Command or Admissions, you can view, accept and decline applications.
-  When you accept an application, the user is automaticly created on the forums with the correct groups.</p>
+  When you accept an application, the user is automatically created on the forums with the correct groups.</p>
 
 <% if Approval.where(approved_at: nil).any? %>
   <table class="table">
@@ -13,12 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <% Approval.all.each do |app| %>
+      <% Approval.where(approved_at: nil, denied: false).each do |app| %>
         <tr>
           <td><%= app.user.username %></td>
           <td><%= app.game.name %></td>
           <td><%= app.user.dob %></td>
-          <td><%= link_to "View Application", approval_path(app), class: "btn btn-success" %></td>
+          <td><%= link_to "View Application", approval_path(app), class: "btn btn-primary" %></td>
         </tr>
       <% end %>
     </tbody>
