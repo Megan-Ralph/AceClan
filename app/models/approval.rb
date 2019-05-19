@@ -9,6 +9,8 @@
 #  approved_by :integer
 #  approved_at :datetime
 #  denied      :boolean          default(FALSE)
+#  denied_by   :integer
+#  denied_at   :datetime
 #
 
 class Approval < ApplicationRecord

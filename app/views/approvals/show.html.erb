@@ -20,12 +20,12 @@
       <p><b>Do you use a VPN to connect to the internet or play games?</b> <%= @user.vpn_connection %></p>
       <br></br>
 
-      <% prms = { approvals: { approved_by: current_user.id, approved_at: Time.now } } %>
-      <%= link_to "Approve Application", approval_path(prms), method: 'patch', class: "btn btn-success", style: "float: left;" %>
-
-      <% rprms = { approvals: { denied: true } } %>
-      <%= link_to "Deny Application", approval_path(rprms), method: 'patch', class: "btn btn-danger", style: "float: right;" %>
-
+      <% if @approval.denied == false && !@approval.approved_by %>
+        <% prms = { approvals: { approved_by: current_user.id, approved_at: Time.now } } %>
+        <%= link_to "Approve Application", approval_path(prms), method: 'patch', class: "btn btn-success", style: "float: left;" %>
+        <% rprms = { approvals: { denied: true, denied_by: current_user.id, denied_at: Time.now } } %>
+        <%= link_to "Deny Application", approval_path(rprms), method: 'patch', class: "btn btn-danger", style: "float: right;" %>
+      <% end %>
     </div>
   </div>
 </section>

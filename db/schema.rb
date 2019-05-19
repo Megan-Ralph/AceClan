@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_122742) do
+ActiveRecord::Schema.define(version: 2019_05_19_125546) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2019_05_19_122742) do
     t.integer "approved_by"
     t.datetime "approved_at"
     t.boolean "denied", default: false
+    t.integer "denied_by"
+    t.datetime "denied_at"
   end
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

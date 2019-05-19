@@ -1,0 +1,48 @@
+<section class="content">
+  <div class="container">
+    <div class="col-md-8 offset-md-2">
+      <% if Approval.all.any? %>
+        <h4>Viewing All Applications</h4>
+        <br></br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Game applied for</th>
+              <th scope="col">Accepted?</th>
+              <th scope="col">Processed by</th>
+              <th scope="col">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% Approval.all.each do |app| %>
+              <tr>
+                <td><%= app.user.username %></td>
+                <td><%= app.game.name %></td>
+                <td>
+                  <% if app.denied %>
+                    <p style="color:red;">No</p>
+                  <% elsif app.denied == false && !app.approved_by.present? %>
+                    <p>Pending</p>
+                  <% elsif app.denied == false && app.approved_by.present? %>
+                    <p style="color:green;">Yes</p>
+                  <% end %>
+                </td>
+                <td>
+                  <% if app.approved_by.present? %>
+                    <%= User.find(app.approved_by).username %>
+                  <% elsif app.denied_by.present? %>
+                    <%= User.find(app.denied_by).username %>
+                  <% end %>
+                </td>
+                <td><%= link_to "View Application", approval_path(app), class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h5><i>There are currently no applications in the system!</i></h5>
+      <% end %>
+    </div>
+  </div>
+</section>

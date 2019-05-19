@@ -1,4 +1,8 @@
 class ApprovalsController < ApplicationController
+  def index
+    @approvals = Approval.all
+  end
+
   def new
 
   end
@@ -20,6 +24,8 @@ class ApprovalsController < ApplicationController
       @approval.approved_at = params[:approvals][:approved_at]
     elsif params[:approvals][:denied]
       @approval.denied = params[:approvals][:denied]
+      @approval.denied_at = params[:approvals][:denied_at]
+      @approval.denied_by = params[:approvals][:denied_by]
     end
     if @approval.save
       redirect_to root_path
