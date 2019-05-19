@@ -46,8 +46,8 @@ class User < ApplicationRecord
   #after_update :forum_application
 
   def forum_enrollment
-    if enrolled == false && confirmed_at == true
-      user_enroll = ForumEnrollment.new(id)
+    if enrolled != true && confirmed_at == true
+      user_enroll = ForumEnrollment.new(self.id)
       user_enroll.enroll
     end
   end
