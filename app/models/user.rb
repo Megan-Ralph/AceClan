@@ -43,11 +43,19 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   after_update :forum_enrollment
+  after_update :forum_grab
 
   def forum_enrollment
     if enrolled != true && confirmed_at.present?
       user_enroll = ForumEnrollment.new(self.id)
       user_enroll.enroll
+    end
+  end
+
+  def forum_grab
+    if enrolled == true
+      grab = ForumEnrollment.new(self.id)
+      grab.get_games_and_groups
     end
   end
 
