@@ -14,8 +14,10 @@ class ForumEnrollment
   end
 
   def apply
-    #need to update to deal with successful applicants
-    response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=31&secondaryGroups=68,#{@user.game.forum_game_id},40&validated=1")
+    forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
+    byebug
+    self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}")
+    response = self.class.post("/core/members?key=#{@api_key}&email=#{@user.email}&group=31&secondaryGroups=68,#{@user.game.forum_game_id},40&validated=1")
     @user.update(applied: true)
   end
 
