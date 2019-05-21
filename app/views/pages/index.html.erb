@@ -1,8 +1,8 @@
-<% if user_signed_in? && !Approval.where(user_id: current_user.id).any? && !@user.forum_primary_group_id.present? %>
+<% if user_signed_in? && @user.enrolled == true && @user.applied != true %>
   <%= render "game_application" %>
-<% elsif user_signed_in? && Approval.where(user_id: current_user.id).any? %>
+<% elsif user_signed_in? && @user.enrolled != true && @user.applied != true %>
     <%= render "non_member_logged_in"%>
-<% elsif user_signed_in? && @user.applied == true %>
+<% elsif user_signed_in? && @user.applied == true && @user.enrolled == true %>
   <%= render "member_logged_in" %>
 <% else %>
   <%= render "basic_sign_up" %>
