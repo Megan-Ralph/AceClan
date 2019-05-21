@@ -16,7 +16,7 @@ class ForumEnrollment
   def apply
     forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
     forum_user_id = forum_user.dig("results").first.dig("id")
-    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{@user.game.forum_game_id},40&validated=1")
+    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{Game.find_by(@user.game_id).forum_game_id},40&validated=1")
     @user.update(applied: true)
   end
 
@@ -25,15 +25,21 @@ class ForumEnrollment
     data = JSON.parse(response.body)
     data = data.dig("results")
 
-    @user.update(forum_primary_group_id: data.first.dig("primaryGroup").dig("id"), forum_primary_group_name: data.first.dig("primaryGroup").dig("formattedName"))
+    forum_primary_group = data.first.dig("primaryGroup").dig("id")
+    forum_group_name = data.first.dig("primaryGroup").dig("formattedName")
+
+    @user.forum_primary_group_id = forum_primary_group
+    @user.forum_primary_group_name = forum_group_name
 
     secondary_groups = data.first.dig("secondaryGroups")
     secondary_groups.each do |s_group|
       if s_group.dig("formattedName").include?("Main Game")
-        @user.update(forum_game_id: s_group.dig("id"))
+        @userforum_game_id = s_group.dig("id")
       end
     end
-    @user.update(forum_secondary_groups: secondary_groups.pluck("id"))
+    @user.forum_secondary_groups = secondary_groups.pluck("id")
+
+    @user.save
   end
 
 end

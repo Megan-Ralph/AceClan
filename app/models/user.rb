@@ -38,12 +38,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  belongs_to :game
+  #belongs_to :game
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
   after_update :forum_enrollment
-  after_update :forum_grab
 
   def forum_enrollment
     if enrolled != true && confirmed_at.present?
