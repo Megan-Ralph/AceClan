@@ -50,7 +50,7 @@ p {
 }
 
 img {
-	max-width: 100%;
+	max-width: 130%;
 }
 
 input:focus,
@@ -743,8 +743,8 @@ ol {
 	z-index: 2;
 }
 
-.footer-logo img {
-	margin-bottom: 35px;
+.footer-logo p {
+	text-align: center;
 }
 
 .footer-widget {

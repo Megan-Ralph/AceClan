@@ -42,27 +42,22 @@
 
     <section class="footer-top-section">
       <div class="container">
-        <div class="footer-top-bg">
-          <img src="" alt="">
-        </div>
         <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-logo text-white">
-              <img src="" alt="">
-              <p>Birdy Picture Here</p>
-            </div>
+          <div class="col-lg-4">
+            <%= link_to image_tag("birdy.png", :border => 0, :alt => '', :title => 'Birdy'), root_path %>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="footer-logo text-white">
-              <img src="" alt="">
-              <p>Privacy Policy</p>
-              <p>Terms and Conditions</p>
-              <p>Code of Conduct</p>
+            <div class="mb-5 mb-md-0">
+              <div class="footer-logo text-white">
+                <p>Privacy Policy</p>
+                <p>Terms and Conditions</p>
+                <p>Code of Conduct</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="mb-5 mb-md-0">
-              <iframe src="https://discordapp.com/widget?id=559697054415323148&theme=dark" width="240" height="412" allowtransparency="true" frameborder="0"></iframe>
+              <img class="ipsImage" src="https://discordapp.com/api/guilds/559697054415323148/widget.png?style=banner3" alt="brilliantdiscord_widget">
             </div>
           </div>
         </div>
