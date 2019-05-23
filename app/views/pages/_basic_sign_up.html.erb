@@ -1,55 +1,72 @@
+<section class="page-info-section set-bg">
+  <div class="pi-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 text-white">
+          <h2 class="comment-title">Welcome to Ace Clan</h2>
+          <p>AceClan.ORG was founded as a Multi-Gaming Military stylised Clan in March 2019 on the basis that everyone deserves a welcome and friendly atmosphere when they play games.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="downArrow bounce">
+    <a><img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=" /></a>
+  </div>
+</section>
+
 <section class="content">
   <div class="container  ">
     <div class="col-md-8 offset-md-2">
       <div class="contact-form-warp">
-        <h4 class="comment-title">CREATE AN ACCOUNT</h4>
-        Creating an account using this form, will automaticly create you a login for our forums. You will be able to login with the same username and password.
-        <br /><Br />
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= render "devise/shared/error_messages", resource: resource %>
-          <div class="form-group">
-              <div class="row">
-                  <div class="col-md-12">
-                    <div class="field"
-                      <%= f.label :username %>
-                      <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
+        <div id="signup">
+          <h4 class="comment-title">CREATE AN ACCOUNT</h4>
+          Creating an account using this form, will automaticly create you a login for our forums. You will be able to login with the same username and password.
+          <br /><Br />
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="field"
+                        <%= f.label :username %>
+                        <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="field">
-                      <%= f.label :email %>
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+                    <div class="col-md-12">
+                      <div class="field">
+                        <%= f.label :email %>
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="field">
-                      <%= f.label :password %>
-                      <% if @minimum_password_length %>
-                      <em>(<%= @minimum_password_length %> characters minimum)</em>
-                      <% end %><br />
-                      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
+                    <div class="col-lg-6">
+                      <div class="field">
+                        <%= f.label :password %>
+                        <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %><br />
+                        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="field">
-                      <%= f.label :password_confirmation %><br />
-                      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password Confirmation" %>
+                    <div class="col-lg-6">
+                      <div class="field">
+                        <%= f.label :password_confirmation %><br />
+                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password Confirmation" %>
+                      </div>
                     </div>
-                  </div>
 
-                  <%= f.hidden_field :game_id, value: 1 %>
+                    <%= f.hidden_field :game_id, value: 1 %>
 
-                  <div class="col-lg-12">
-                    <div class="actions" style="padding-top: 2%">
-                      <%= f.submit "Sign up", class: "site-btn btn-sm centered" %>
+                    <div class="col-lg-12">
+                      <div class="actions" style="padding-top: 2%">
+                        <%= f.submit "Sign up", class: "site-btn btn-sm centered" %>
+                      </div>
                     </div>
-                  </div>
-              </div>
-                <%= render "devise/shared/links" %>
+                </div>
+                  <%= render "devise/shared/links" %>
+            </div>
           </div>
         </div>
         <% end %>
       </div>
     </div>
-  </div>
 </section>

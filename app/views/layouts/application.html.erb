@@ -40,30 +40,47 @@
 
     <%= yield %>
 
-    <section class="footer-top-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <%= link_to image_tag("birdy.png", :border => 0, :alt => '', :title => 'Birdy'), root_path %>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="mb-5 mb-md-0">
-              <div class="footer-logo text-white">
-                <p>Privacy Policy</p>
-                <p>Terms and Conditions</p>
-                <p>Code of Conduct</p>
+    <!-- Footer top section -->
+  	<section class="footer-top-section">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-4 col-md-12">
+  					<div class="footer-logo text-white">
+  						<%= link_to image_tag("birdy.png", :border => 0, :alt => '', :title => 'Birdy', :style => 'width:90%; margin: 0 auto;'), root_path, style: "width: 100%; display: block; text-align: center" %>
+  						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+  					</div>
+  				</div>
+  				<div class="col-lg-4 col-md-6">
+  					<div class="footer-widget">
+  						<h4 class="fw-title">Useful Links</h4>
+              <div class="top-comment">
+                <div class="tc-item">
+                  <div class="tc-content">
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms and Conditions</a></p>
+                    <p><a href="#">Code of Conduct</a></p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="mb-5 mb-md-0">
-              <img class="ipsImage" src="https://discordapp.com/api/guilds/559697054415323148/widget.png?style=banner3" alt="brilliantdiscord_widget">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+  					</div>
+  				</div>
+  				<div class="col-lg-4 col-md-6">
+  					<div class="footer-widget">
+  						<h4 class="fw-title">Fun Links</h4>
+  						<div class="top-comment">
+  							<div class="tc-item">
+  								<div class="tc-content">
+  									<p><a href="#">Discord Link</a></p>
+                    <p><a href="#">Forum Link</a></p>
+                    <p><a href="#">Server Links</a></p>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
 
     <footer class="footer-section">
       <div class="container">
