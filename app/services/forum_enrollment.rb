@@ -20,7 +20,6 @@ class ForumEnrollment
   end
 
   def get_games_and_groups
-    byebug
     response = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
     data = JSON.parse(response.body)
     data = data.dig("results")
