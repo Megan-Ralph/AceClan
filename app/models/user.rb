@@ -42,10 +42,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  after_update :forum_enrollment
+  after_save :forum_enrollment
 
   def forum_enrollment
-    if enrolled != true && confirmed_at.present?
+    if enrolled != true && !forum_primary_group_id.present?
       user_enroll = ForumEnrollment.new(self.id)
       user_enroll.enroll
     end
@@ -55,6 +55,25 @@ class User < ApplicationRecord
     if enrolled == true
       grab = ForumEnrollment.new(self.id)
       grab.get_games_and_groups
+    end
+  end
+
+  def visitor?
+    forum_primary_group_id == 3 && !Approval.where(user_id: id).any?
+  end
+
+  def member?
+    forum_primary_group_id.present? && forum_primary_group_id != 3
+  end
+
+  def approval_pending?
+    approvals = Approval.where(user_id: id)
+    if approvals.empty?
+      false
+    elsif approvals.last.complete?
+      false
+    else
+      true
     end
   end
 

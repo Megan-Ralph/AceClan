@@ -9,14 +9,14 @@ class ForumEnrollment
 
   def enroll
     response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=3&validated=0")
-    @user.update(enrolled: true)
+    @user.update(enrolled: true, forum_primary_group_id: 3)
   end
 
   def apply
     forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
     forum_user_id = forum_user.dig("results").first.dig("id")
-    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{Game.find_by(@user.game_id).forum_game_id},40")
-    @user.update(applied: true)
+    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{Game.find(@user.game_id).forum_game_id},40")
+    @user.update(applied: true, forum_primary_group_id: 31)
   end
 
   def get_games_and_groups

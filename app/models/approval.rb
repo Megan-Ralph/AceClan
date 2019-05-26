@@ -16,4 +16,19 @@
 class Approval < ApplicationRecord
   belongs_to :user
   belongs_to :game
+
+  after_update :forum_application
+
+
+  def forum_application
+    if approved_by && approved_at
+      user_init = ForumEnrollment.new(user_id)
+      user_init.apply
+    end
+  end
+
+  def complete?
+    approved_by.present? || denied_by.present?
+  end
+
 end
