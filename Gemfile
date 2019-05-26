@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'letter_opener'
+gem 'sendgrid-ruby'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

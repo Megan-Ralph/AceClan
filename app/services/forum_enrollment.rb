@@ -8,15 +8,14 @@ class ForumEnrollment
   end
 
   def enroll
-    #I'm always sending validated as true because users get enrolled when they validate their account
-    response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=3&validated=1")
+    response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=3&validated=0")
     @user.update(enrolled: true)
   end
 
   def apply
     forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
     forum_user_id = forum_user.dig("results").first.dig("id")
-    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{Game.find_by(@user.game_id).forum_game_id},40&validated=1")
+    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=68,#{Game.find_by(@user.game_id).forum_game_id},40")
     @user.update(applied: true)
   end
 
