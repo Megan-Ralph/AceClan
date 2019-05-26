@@ -950,6 +950,28 @@ ol {
 	font-weight: 400;
 }
 
+.page-footer {
+	height: 300px;
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("/assets/bf-banner.jpg");
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-footer .pf-content {
+	top: 50px;
+	position: relative;
+	width: 100%;
+	bottom: 0;
+	left: 12%;
+	z-index: 2;
+}
+
+.page-footer .pf-content h2 {
+	font-size: 60px;
+	font-weight: 400;
+}
+
 .site-pagination {
 	padding-top: 50px;
 }
