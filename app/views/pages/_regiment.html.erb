@@ -1,0 +1,10 @@
+<%= game.name %>
+
+<% @users = User.where(game_id: game.id) %>
+<% if @users.any? %>
+  <% @users.each do |user| %>
+    <p><%= user.username %> - <%= user.forum_primary_group_name %></p>
+  <% end %>
+<% else %>
+  <p>There are no other users in your regiment!</p>
+<% end %>

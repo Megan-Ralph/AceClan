@@ -1,0 +1,11 @@
+<% @events = Event.where(game_id: @user.game_id) %>
+
+<% if @events.any? %>
+  <% @events.each do |event| %>
+    <p><%= event.name %></p>
+    <p><%= event.description %></p>
+    <p><%= event.date_time %></p>
+  <% end %>
+<% else %>
+  <p>There are no events planned!</p>
+<% end %>

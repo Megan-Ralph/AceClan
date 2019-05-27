@@ -33,7 +33,7 @@ class ForumEnrollment
     secondary_groups = data.first.dig("secondaryGroups")
     secondary_groups.each do |s_group|
       if s_group.dig("formattedName").include?("Main Game")
-        @userforum_game_id = s_group.dig("id")
+        @user.forum_game_id = s_group.dig("id")
       end
     end
     @user.forum_secondary_groups = secondary_groups.pluck("id")
