@@ -1,6 +1,6 @@
 <% if user_signed_in? && @user.visitor? %>
   <%= render "game_application" %>
-<% elsif user_signed_in? && @user.approval_pending? %>
+<% elsif user_signed_in? && @user.approval_pending? && !@user.member? %>
     <%= render "non_member_logged_in"%>
 <% elsif user_signed_in? && @user.member? %>
   <%= render "member_logged_in" %>

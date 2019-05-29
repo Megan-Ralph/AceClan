@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {sessions: "sessions"}
 
   resources :approvals
+  resources :games
 
   resource :user, only: [:edit, :index] do
     collection do

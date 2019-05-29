@@ -1,0 +1,23 @@
+<section class="page-section review-page spad">
+  <br></br>
+  <div class="container">
+    <div class="row">
+      <% @games.each do |game| %>
+        <div class="col-md-6">
+          <div class="review-item">
+            <div class="review-cover set-bg">
+              <% if game.game_image %>
+                <img src="<%= url_for(game.game_image) %>" height="345px" width="558px">
+              <% end %>
+            </div>
+            <div class="review-text">
+              <h4><%= link_to "#{game.name}", game_path(game.id) %></h4>
+              <br></br>
+              <p><%= game.description %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
