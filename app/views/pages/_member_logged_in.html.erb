@@ -8,7 +8,9 @@
         <p>Your main game is <%= Game.find_by(forum_game_id: @user.forum_game_id).name %></p>
       <% end %>
       <br></br>
-      <%= render "regiment", game: Game.find_by(forum_game_id: @user.forum_game_id) if @user.forum_game_id.present? %>
+      <% @user.forum_game_id.present? && @user.game_id.present? %>
+        <%= render "regiment", game: Game.find_by(forum_game_id: @user.forum_game_id) %>
+      <% end %>
       <br></br>
       <h4 class="comment-title">YOUR EVENTS</h4>
       <%= render "events" %>
