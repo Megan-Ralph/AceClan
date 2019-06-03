@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :approvals
   resources :games
   resources :tabs
+  resources :subtabs
 
   resource :user, only: [:edit, :index] do
     collection do

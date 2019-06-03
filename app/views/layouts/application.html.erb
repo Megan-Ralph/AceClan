@@ -31,22 +31,20 @@
           <ul>
             <li><%= link_to "Home", main_app.root_path %></li>
             <li><%= link_to "Games", games_path %></li>
-            <% Tab.all.each do |tab| %>
-              <li><%= link_to "#{tab.name}", tab_path(tab.id) %><li>
+            <% Tab.all.order(:rank).each do |tab| %>
+              <% if tab.main_tab? %>
+                <li><%= link_to "#{tab.name}", tab_path(tab.id) %><li>
+              <% elsif tab.sub_nav_main_tab? %>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= tab.name %></a>
+                  <div style="z-index: 1000;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <% SubTab.where(tab_id: tab.id).each do |st|  %>
+                      <%= link_to "#{st.name}", subtab_path(st.id), class: "dropdown-item", style: "color:#d13b00; margin:0;" %>
+                    <% end %>
+                  </div>
+                </li>
+              <% end %>
             <% end %>
-
-                            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fix me Ben</a>
-              <div style="z-index: 1000;" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-
-            
           </ul>
         </nav>
       </div>
