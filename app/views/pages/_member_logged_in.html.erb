@@ -19,7 +19,7 @@
         <%= link_to "Clan Applications", approvals_path, class: "btn btn-info" %>
         <button type="button" class="btn btn-success">Job Applications</button>
         <button type="button" class="btn btn-danger">Resignation Requests</button>
-        <button type="button" class="btn btn-warning">Admin Portal</button>
+        <a href="/admin" class="btn btn-warning" role="button">Admin Portal</a>
       <% elsif @user&.forum_secondary_groups&.include?("37") %>
         <%= link_to "Clan Applications", approvals_path, class: "btn btn-info" %>
         <button type="button" class="btn btn-success">Job Applications</button>
