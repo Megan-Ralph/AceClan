@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_050538) do
+ActiveRecord::Schema.define(version: 2019_06_03_073442) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -55,6 +55,21 @@ ActiveRecord::Schema.define(version: 2019_06_03_050538) do
     t.string "name"
     t.text "description"
     t.integer "forum_game_id"
+  end
+
+  create_table "job_applications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "listing_id"
+    t.text "description"
+    t.integer "status"
+  end
+
+  create_table "job_listings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "viewable_rank_ids"
+    t.integer "created_by"
+    t.boolean "active"
   end
 
   create_table "sub_tabs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

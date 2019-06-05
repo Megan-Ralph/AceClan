@@ -1,0 +1,18 @@
+<section class="content">
+  <div class="container">
+    <div class="col-md-8 offset-md-2">
+      <h4 class="comment-title">APPLICATION FOR <%= JobListing.find_by(@job_application.listing_id).name %></h4>
+
+      <p><b>Applying User:</b> <%= @user.username %></p>
+      <p><b>Application Text:</b> <%= @job_application.description %></p>
+      <p><b>Application Status:</b> <%= @job_application.status&.humanize %></p>
+
+      <% if @job_application.status == "pending" %>
+        <% prms = { job_applications: { status: "accepted" } } %>
+        <%= link_to "Approve Application", job_application_path(prms), method: 'patch', class: "btn btn-success", style: "float: left;" %>
+        <% rprms = { job_applications: { status: "denied" } } %>
+        <%= link_to "Deny Application", job_application_path(rprms), method: 'patch', class: "btn btn-danger", style: "float: right;" %>
+      <% end %>
+    </div>
+  </div>
+</section>

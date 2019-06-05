@@ -15,9 +15,12 @@
       <h4 class="comment-title">YOUR EVENTS</h4>
       <%= render "events" %>
       <br></br>
+      <h4 class="comment-title">OPEN JOB LISTINGS</h4>
+      <%= render "jobs" %>
+      <br></br>
       <% if @user&.forum_secondary_groups&.include?("4") %>
         <%= link_to "Clan Applications", approvals_path, class: "btn btn-info" %>
-        <button type="button" class="btn btn-success">Job Applications</button>
+        <%= link_to "Job Applications", job_applications_path, class: "btn btn-success" %>
         <button type="button" class="btn btn-danger">Resignation Requests</button>
         <a href="/admin" class="btn btn-warning" role="button">Admin Portal</a>
       <% elsif @user&.forum_secondary_groups&.include?("37") %>

@@ -1,0 +1,23 @@
+<% if @job_applications.any? %>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Job Title</th>
+      <th scope="col">Status</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @job_applications.each do |job| %>
+      <tr>
+        <td><%= JobListing.find_by(job.listing_id).name %></td>
+        <td><%= job.status %></td>
+        <td><%= link_to "View", job_application_path(job) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% else %>
+  <h5><i>There are currently no job listings!</i></h5>
+<% end %>

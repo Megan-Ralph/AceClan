@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :games
   resources :tabs
   resources :subtabs
+  resources :job_applications
+  resources :job_listings
 
   resource :user, only: [:edit, :index] do
     collection do
