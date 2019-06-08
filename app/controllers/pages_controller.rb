@@ -5,6 +5,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def brand
+
+  end
+
   def show
     render template: "pages/#{params[:page]}"
   end
