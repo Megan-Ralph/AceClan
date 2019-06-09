@@ -15,7 +15,7 @@ class ForumEnrollment
   def apply
     forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
     forum_user_id = forum_user.dig("results").first.dig("id")
-    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=32,#{Game.find_by(@user.game_id).forum_game_id},40")
+    response = self.class.post("/core/members?key=#{@api_key}?id=#{forum_user_id}&group=31&secondaryGroups=32,#{Game.find(@user.game_id).forum_game_id},40")
     @user.update(applied: true, forum_primary_group_id: 31)
   end
 
