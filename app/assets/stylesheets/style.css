@@ -727,7 +727,6 @@ ol {
 ------------------------*/
 
 .footer-top-section {
-	background-image: url("/assets/pattern.png");
 	background-repeat: repeat;
 	padding: 72px 0;
 }
@@ -738,7 +737,6 @@ ol {
 
 .footer-top-bg {
 	position: absolute;
-	left: -30px;
 	bottom: -85px;
 	z-index: 2;
 }
@@ -749,13 +747,14 @@ ol {
 
 .footer-widget {
 	padding: 40px 30px 7px;
-	background: #252525;
-	border: 1px solid #4a4a4a;
+	border: 0px solid #4a4a4a;
 }
 
 .footer-widget .fw-title {
 	color: #fff;
 	margin-bottom: 40px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #4a4a4a;
 }
 
 .latest-blog .lb-item {
@@ -808,7 +807,6 @@ ol {
 }
 
 .top-comment .tc-item .tc-content {
-	padding-left: 20px;
 }
 
 .top-comment .tc-item .tc-content p {
