@@ -9,6 +9,10 @@ class PagesController < ApplicationController
 
   end
 
+  def tech_services
+    @users = User.all
+  end
+
   def show
     render template: "pages/#{params[:page]}"
   end

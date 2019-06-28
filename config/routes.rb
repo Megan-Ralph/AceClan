@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   resources :job_applications
   resources :job_listings
 
-  resource :user, only: [:edit, :index] do
+  resource :user do
     collection do
       patch 'update_user'
+      patch 'update_user_groups'
     end
   end
 

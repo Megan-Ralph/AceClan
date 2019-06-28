@@ -6,6 +6,18 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def update_user_groups
+    @user = current_user
+
+    if @user.update(user_params)
+      redirect_to request.referer
+      f = ForumEnrollment.new(@user.id)
+      f.change_groups(params[:forum_primary_group_id], params[:forum_secondary_groups])
+    else
+      render "edit"
+    end
+  end
+
   def update_user
     @user = current_user
     if @user.update(user_params)
@@ -23,6 +35,6 @@ class UsersController < ApplicationController
 
   def user_params
     # NOTE: Using `strong_parameters` gem
-    params.require(:user).permit(:username, :email, :game_id, :dob, :location, :discord_username, :mic, :what_game_why, :console_gaming, :hear_ace, :referring_member, :admin_interest, :clan_before, :vpn_connection)
+    params.require(:user).permit(:forum_primary_group_id, :forum_secondary_groups, :username, :email, :game_id, :dob, :location, :discord_username, :mic, :what_game_why, :console_gaming, :hear_ace, :referring_member, :admin_interest, :clan_before, :vpn_connection)
   end
 end

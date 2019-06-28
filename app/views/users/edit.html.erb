@@ -1,0 +1,24 @@
+<section class="content">
+  <div class="container">
+    <div class="col-md-8 offset-md-2">
+      <h4 class="comment-title">EDITING <%= @user.username %>'S FORUM GROUPS</h4>
+      <%= form_for @user, :url => url_for(:controller => 'users', :action => 'update_user_groups') do |f| %>
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :forum_primary_group_id %>
+            <%= f.number_field :forum_primary_group_id, class: "form-control" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :forum_secondary_groups %>
+            <%= f.text_field :forum_secondary_groups, class: "form-control" %>
+          </div>
+
+          <div class="actions" style="padding-top: 2%">
+            <%= f.submit "Save", class: "site-btn btn-sm centered" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

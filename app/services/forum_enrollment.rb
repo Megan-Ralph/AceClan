@@ -7,6 +7,14 @@ class ForumEnrollment
     @api_key = "c88540e61d46bb7837a677289c8872c1"
   end
 
+  def change_groups(forum_primary_group_id, forum_secondary_groups)
+    forum_user = self.class.get("/core/members?key=#{@api_key}&email=#{@user.email}")
+    forum_user_id = forum_user.dig("results").first.dig("id")
+
+    response = self.class.post("/core/members/#{forum_user_id}/?key=#{@api_key}&group=#{forum_primary_group_id}&secondaryGroups=#{forum_secondary_groups}")
+
+  end
+
   def enroll
     response = self.class.post("/core/members?key=#{@api_key}&name=#{@user.username}&email=#{@user.email}&password=#{@user.password}&group=3&validated=0")
     @user.update(enrolled: true, forum_primary_group_id: 3)
@@ -18,6 +26,10 @@ class ForumEnrollment
     response = self.class.post("/core/members/#{forum_user_id}/?key=#{@api_key}&group=31&secondaryGroups=32,#{Game.find(@user.game_id).forum_game_id},40")
 
     @user.update(applied: true, forum_primary_group_id: 31)
+  end
+
+  def get_forum_groups
+    #get current forum groups
   end
 
   def get_games_and_groups
