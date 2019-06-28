@@ -835,9 +835,13 @@ ol {
 ------------------------*/
 
 .footer-section {
-	padding: 18px 0 16px;
 	overflow: hidden;
 	background: #252525;
+	height: 100px;
+}
+
+.footer-section-right {
+	float: right;
 }
 
 .footer-menu {

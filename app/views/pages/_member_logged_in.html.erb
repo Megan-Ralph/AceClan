@@ -29,6 +29,10 @@
         <button type="button" class="btn btn-danger">Resignation Requests</button>
       <% end %>
       <br></br>
+      <% if @user&.forum_secondary_groups&.include?("9") || @user&.forum_secondary_groups&.include?("4") %>
+        <a href="/pages/tech_services" class="btn btn-info" role="button">Tech Services</a>
+      <% end %>
+      <br></br>
     </div>
   </div>
 </section>

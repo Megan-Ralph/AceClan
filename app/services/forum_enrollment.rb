@@ -29,7 +29,31 @@ class ForumEnrollment
   end
 
   def get_forum_groups
-    #get current forum groups
+    GroupDump.all.delete_all
+
+    response = self.class.get("/core/groups?key=#{@api_key}")
+    data = JSON.parse(response.body)
+    data = data.dig("results")
+
+    data.each do |set|
+      GroupDump.where(forum_group_id: set.dig("id"), name: set.dig("name")).first_or_create
+    end
+
+    response = self.class.get("/core/groups?key=#{@api_key}&page=2")
+    data = JSON.parse(response.body)
+    data = data.dig("results")
+
+    data.each do |set|
+      GroupDump.where(forum_group_id: set.dig("id"), name: set.dig("name")).first_or_create
+    end
+
+    response = self.class.get("/core/groups?key=#{@api_key}&page=3")
+    data = JSON.parse(response.body)
+    data = data.dig("results")
+
+    data.each do |set|
+      GroupDump.where(forum_group_id: set.dig("id"), name: set.dig("name")).first_or_create
+    end
   end
 
   def get_games_and_groups

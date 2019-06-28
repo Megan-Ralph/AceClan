@@ -1,0 +1,3 @@
+class GroupDump < ApplicationRecord
+
+end

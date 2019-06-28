@@ -17,8 +17,39 @@
           <div class="actions" style="padding-top: 2%">
             <%= f.submit "Save", class: "site-btn btn-sm centered" %>
           </div>
-        <% end %>
+        </div>
+      <% end %>
+
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Check Forum Group IDs</button>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"></button>
+              <h4 style="color: #000000;" class="modal-title">Forum Group Names and IDs</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <ul>
+                  <% GroupDump.where.not(forum_group_id: [155, 156, 157]).each do |g| %>
+                    <li><%= g.name %> - <%= g.forum_group_id %></li>
+                  <% end %>
+                </ul>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+
     </div>
   </div>
 </section>

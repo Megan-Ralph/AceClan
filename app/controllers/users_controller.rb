@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    f = ForumEnrollment.new(@user.id)
+    f.get_forum_groups
   end
 
   def update_user_groups
@@ -11,6 +13,7 @@ class UsersController < ApplicationController
 
     if @user.update(user_params)
       redirect_to request.referer
+
       f = ForumEnrollment.new(@user.id)
       f.change_groups(params[:forum_primary_group_id], params[:forum_secondary_groups])
     else
