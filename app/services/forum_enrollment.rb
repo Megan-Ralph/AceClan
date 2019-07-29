@@ -4,7 +4,7 @@ class ForumEnrollment
 
   def initialize(user_id)
     @user = User.find(user_id)
-    @api_key = "c88540e61d46bb7837a677289c8872c1"
+    @api_key = "9ccf76aa90a4049039a59890c7f43ba9"
   end
 
   def change_groups(forum_primary_group_id, forum_secondary_groups)
