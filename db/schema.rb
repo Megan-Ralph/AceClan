@@ -77,6 +77,12 @@ ActiveRecord::Schema.define(version: 2019_06_28_164429) do
     t.boolean "active"
   end
 
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "review_content"
+    t.float "rating"
+  end
+
   create_table "sub_tabs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "tab_id"
     t.integer "rank"

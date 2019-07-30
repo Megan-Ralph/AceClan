@@ -7,3 +7,4 @@
 //= require jquery_marquee.min.js
 //= require owl_carousel.min.js
 //= require main.js
+//=require typed.js

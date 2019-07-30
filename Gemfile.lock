@@ -99,6 +99,9 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    icomoon-rails (0.1.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     image_processing (1.9.0)
       mini_magick (>= 4.9.3, < 5)
       ruby-vips (>= 2.0.13, < 3)
@@ -287,6 +290,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   httparty
+  icomoon-rails
   image_processing (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)

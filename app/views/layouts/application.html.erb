@@ -5,121 +5,171 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <title>Ace Clan</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
     <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
-    <header class="header-section" style="top: 0; position: fixed; width: 100%; z-index: 999;">
-      <div class="container">
-        <%= link_to image_tag("logo.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'site-logo' %>
+  <body style="margin-top: 134px;">
+    <div class="site-wrap" style="position: fixed; width: 100%; top: 0; z-index: 999;">
+      <div class="site-mobile-menu">
+         <div class="site-mobile-menu-header">
+           <div class="site-mobile-menu-close mt-3">
+             <span class="icon-close2 js-menu-toggle"></span>
+           </div>
+         </div>
+         <div class="site-mobile-menu-body"></div>
+       </div>
 
-        <% if user_signed_in? %>
-          <button class="site-btn btn-sm" style="float: right;"><%= link_to('Logout', destroy_user_session_path, method: :delete, style: "color: #FFF;") %></button>
-        <% else %>
-          <button class="site-btn btn-sm" style="float: right;"><%= link_to('Login', new_user_session_path, style: "color: #FFF;") %></button>
-        <% end %>
-        <div class="nav-switch">
-          <i class="fa fa-bars"></i>
-        </div>
-
-        <nav class="main-menu">
-          <ul>
-            <li><%= link_to "Home", main_app.root_path %></li>
-            <li><%= link_to "Games", games_path %></li>
-            <% Tab.all.each do |tab| %>
-              <% if tab.main_tab? %>
-                <li><%= link_to "#{tab.name}", tab_path(tab.id) %><li>
-              <% elsif tab.sub_nav_main_tab? %>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= tab.name %></a>
-                  <div style="z-index: 1000;" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <% SubTab.where(tab_id: tab.id).each do |st|  %>
-                      <%= link_to "#{st.name}", subtab_path(st.id), class: "dropdown-item", style: "color:#d13b00; margin:0;" %>
-                    <% end %>
-                  </div>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <%= yield %>
-
-
-    <section class="page-footer">
-      <div class="pf-content">
+      <div class="top-bar py-2">
         <div class="container">
           <div class="row">
-            <div class="col-xl-7 text-white">
-                <h4 class="comment-title">Join our forums to interact with other members, find important documentation and have some fun.</h4>
-                <button class="site-btn btn-sm"><a style="color:white;" href="https://forum.aceclan.org/">Forums</a></button>
-            </div>
+
+         <!-- Social Media -->
+         <div class="col-4 text-left">
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <span class="icon-instagram"        data-toggle="tooltip" title="Instagram Page"></span>
+         </div>
+
+         <!-- User Bar -->
+         <div class="col-8 text-right">
+           <% if user_signed_in? %>
+             <%= link_to('Log Out', destroy_user_session_path, method: :delete, role: button) %>
+           <% else %>
+             <%= link_to('Login', new_user_session_path, { :class => 'dropdown-toggle', :role => 'button', 'data-toggle' => 'dropdown'}) %>
+           <% end %>
+
+           <div class="dropdown-menu" style="padding: 20px; max-width: 220px; z-index: 999999;">
+             <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-login", style: "font-size: 14px") do |f| %>
+               <p style="font-size: 14px;">You can use your forum username.</p><div class="dropdown-divider"></div>
+               <div style="width: 100%; padding:5px;">
+                 <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "width: 100%; padding:5px;", placeholder: "Email" %></br>
+               </div>
+               <div style="width: 100%; padding: 5px;">
+                 <%= f.password_field :password, autocomplete: "current-password", style: "width: 100%; padding:5px;", placeholder: "Password" %></br>
+               </div>
+               <%= f.submit "Log in", class: "btn btn-primary", style: "width: 100%;" %>
+             <% end %>
+           </div>
+
+           <span class="icon-user"></span>
+         </div>
+      </div>
+   </div>
+</div>
+
+  <header class="site-navbar py-4" role="banner" style="border-bottom: 1px solid #ff4700 !important; ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-11 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="/index.php" class="text-white h2 mb-0">AceClan.ORG</a></h1>
+        </div>
+
+        <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+
+        <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+          <li class="active"><%= link_to "Home", root_path %></li>
+          <li><a href="https://forum.aceclan.org/">Forums</a></li>
+          <li class="has-children">
+          <a href="services.html">Regiment Rosters</a>
+          <ul class="dropdown" style="right: 0;">
+            <li><h6 class="dropdown-header">Command Staff</h6></li>
+            <li><a href="services.html">Central Command</a></li>
+            <li><a href="services.html">Command Council</a></li>
+            <li><h6 class="dropdown-header">CiC's Executive Cabinet</h6></li>
+            <li><a href="services.html">Military Police</a></li>
+            <li><a href="services.html">Admissions Dept.</a></li>
+            <li><a href="services.html">Graphics Team</a></li>
+            <li><a href="services.html">Social Media Team</a></li>
+            <li><h6 class="dropdown-header">Logistics</h6></li>
+            <li><a href="services.html">Tech Services</a></li>
+            <li><h6 class="dropdown-header">Operations</h6></li>
+            <li><a href="services.html">Counter-Strike</a></li>
+            <li><a href="services.html">Apex: Legends</a></li>
+            <li><a href="services.html">Rainbow 6: Siege</a></li>
+            <li><a href="services.html">League of Legends</a></li>
+            <li><a href="services.html">Minecraft</a></li>
+          </ul>
+          </li>
+          <li class="has-children">
+            <a href="services.html">About Us</a>
+            <ul class="dropdown" style="right: 0;">
+              <li><a href="services.html">Menu Item</a></li>
+              <li><a href="services.html">Menu Item</a></li>
+              <li><a href="services.html">Menu Item</a></li>
+              <li><a href="services.html">Menu Item</a></li>
+              <li><a href="services.html">Menu Item</a></li>
+              <li class="has-children">
+              <a href="services.html">Clan Structure?</a>
+              <ul class="dropdown">
+                <li><a href="services.html">Menu Item</a></li>
+                <li><a href="services.html">Menu Item</a></li>
+                <li><a href="services.html">Menu Item</a></li>
+                <li><a href="services.html">Menu Item</a></li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-children"></li>
+        </ul>
+        </nav>
+      </div>
+
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a
+        href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+      </div>
+
+    </div>
+    </div>
+  </header>
+</div>
+
+<%= yield %>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+
+          <div class="col-md-5">
+            <h2 class="footer-heading mb-4" style="text-transform: uppercase;">Command <span style="color: #ff4700;">Staff</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
           </div>
+
+          <div class="col-md-3 ml-auto">
+            <h2 class="footer-heading mb-4" style="text-transform: uppercase;">Command <span style="color: #ff4700;">Staff</span></h2>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h2 class="footer-heading mb-4" style="text-transform: uppercase;">Command <span style="color: #ff4700;">Staff</span></h2>
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+          </div>
+
+          <div class="col-md-3 ml-auto">
+            <%= link_to image_tag("ts.png", :border => 0, width: "300", height: "90", :alt => '', :title => ''), "https://teamspeak.com/en/?utm_source=sponsor&utm_campaign=aceclan.org", :class => 'site-logo' %>
+            Sponsored By
+          </div>
+
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</footer>
 
-    <!-- Footer top section -->
-  	<section class="footer-top-section">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-lg-4 col-md-12">
-  					<div class="footer-logo text-white">
-  						<%= link_to image_tag("birdy.png", :border => 0, :alt => '', :title => 'Birdy', :style => 'width:90%; margin: 0 auto;'), root_path, style: "width: 100%; display: block; text-align: center" %>
-  						<p>AceClan.ORG was founded as a Multi-Gaming military stylised clan in March 2019 on the basis that everyone deserves a welcome and friendly atmosphere when they play games.</p>
-  					</div>
-  				</div>
-  				<div class="col-lg-4 col-md-6">
-  					<div class="footer-widget">
-  						<h4 class="fw-title">COMMAND <span style="color:#FF4700;">STAFF<span></h4>
-              <div class="top-comment">
-                <div class="tc-item">
-                  <div class="tc-content">
-                    <p>CrazyShooter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#FF4700;"><b>>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Clan Commanding Officer</p>
-                    <p>Expression93 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#FF4700;"><b>>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Clan Executive Officer</p>
-                    <p>Tremmert &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#FF4700;"><b>>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Logistics Officer</p>
-                    <p>PYXIS &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FF4700;"><b>>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Operations Officer</p>
-                  </div>
-                </div>
-              </div>
-  					</div>
-  				</div>
-  				<div class="col-lg-4 col-md-6">
-  					<div class="footer-widget">
-  						<h4 class="fw-title">SUPPORTED <span style="color:#FF4700;">REGIMENTS</span></h4>
-  						<div class="top-comment">
-  							<div class="tc-item">
-  								<div class="tc-content">
-  									<p><span style="color:#FF4700;"><b>>></b></span>&nbsp;Counter Strike: Global Offensive</p>
-                    <p><span style="color:#FF4700;"><b>>></b></span>&nbsp;League of Legends</p>
-                    <p><span style="color:#FF4700;"><b>>></b></span>&nbsp;Apex: Legends</p>
-                    <p><span style="color:#FF4700;"><b>>></b></span>&nbsp;Rainbow Six: Siege</p>
-                    <p><span style="color:#FF4700;"><b>>></b></span>&nbsp;Minecraft</p>
-  								</div>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</section>
-
-    <footer class="footer-section">
-      <div class="container" style="float: right;">
-        <div class="footer-section-right"
-          <%= link_to image_tag("ts.png", :border => 0, width: "300", height: "90", :alt => '', :title => ''), "https://teamspeak.com/en/?utm_source=sponsor&utm_campaign=aceclan.org", :class => 'site-logo' %>
-        </div>
-      </div>
-    </footer>
-  </body>
+</body>
 </html>
